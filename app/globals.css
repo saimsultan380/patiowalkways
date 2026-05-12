@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #111111;
+  --color-secondary: #555555;
+  --color-muted: #999999;
+  --color-bg-off: #F5F4F1;
+  --color-accent: #C8A96E;
+  --color-border-subtle: #E5E5E5;
+  
+  --font-inter: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-playfair: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-space: var(--font-space), "Space Grotesk", sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.display-heading {
+  font-family: var(--font-playfair), serif;
+}
+
+@layer utilities {
+  .tracking-widest-extra {
+    letter-spacing: 0.2em;
+  }
+}

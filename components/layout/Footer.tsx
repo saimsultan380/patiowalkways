@@ -1,0 +1,160 @@
+"use client";
+
+import LinkNext from "next/link";
+import { Globe, Phone, Mail, Send } from "lucide-react";
+
+const SocialIcon = ({ name }: { name: string }) => {
+  const icons: Record<string, React.ReactNode> = {
+    Facebook: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+        <path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978 1.602 0 2.703.095 2.703.095v3.386h-1.742c-1.557 0-1.909.866-1.909 2.07v2.007h3.757l-.503 3.667h-3.254v7.981H9.101z"/>
+      </svg>
+    ),
+    Instagram: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+      </svg>
+    ),
+    Twitter: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+      </svg>
+    ),
+    Linkedin: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+    )
+  };
+  return icons[name] || <Globe size={18} />;
+};
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-white text-primary pt-32 pb-12 overflow-hidden relative border-t border-border-subtle">
+      {/* Decorative background element */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-bg-off/50 -skew-x-12 translate-x-1/2 pointer-events-none" />
+
+      <div className="max-w-[1320px] mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-12 mb-20">
+          {/* Brand & Info */}
+          <div className="lg:col-span-1">
+            <LinkNext href="/" className="text-3xl font-space font-extrabold tracking-tight mb-8 block">
+              Pro<span className="text-accent underline decoration-1 underline-offset-8">Craft</span>
+            </LinkNext>
+            <p className="text-secondary text-sm leading-relaxed mb-10 max-w-xs font-medium">
+              Setting the standard for premium home maintenance. From flawless tiling to expert plumbing, we deliver craftsmanship that lasts a lifetime.
+            </p>
+            <div className="flex space-x-4">
+              {[
+                { name: "Facebook", href: "#" },
+                { name: "Instagram", href: "#" },
+                { name: "Twitter", href: "#" },
+                { name: "Linkedin", href: "#" },
+              ].map((social, i) => (
+                <LinkNext 
+                  key={i} 
+                  href={social.href}
+                  className="w-10 h-10 rounded-[4px] border border-border-subtle flex items-center justify-center hover:bg-[#C8A96E] hover:border-[#C8A96E] hover:text-primary transition-all duration-300 bg-white shadow-sm"
+                >
+                  <SocialIcon name={social.name} />
+                </LinkNext>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="lg:col-span-1">
+            <h4 className="font-space text-base font-bold uppercase tracking-[0.2em] mb-10 text-accent">Services</h4>
+            <ul className="space-y-4">
+              {["Tiles Installation", "Plumbing Services", "Carpentry & Woodwork", "Interior Painting"].map((item) => (
+                <li key={item}>
+                  <LinkNext href="#" className="text-secondary font-medium text-sm hover:text-accent hover:translate-x-1 inline-block transition-all duration-300">
+                    {item}
+                  </LinkNext>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company Links */}
+          <div className="lg:col-span-1">
+            <h4 className="font-space text-base font-bold uppercase tracking-[0.2em] mb-10 text-accent">Company</h4>
+            <ul className="space-y-4">
+              {[
+                { name: "How It Works", href: "#how-it-works" },
+                { name: "Recent Projects", href: "#projects" },
+                { name: "Why Choose Us", href: "#why-us" },
+                { name: "Client Reviews", href: "#reviews" },
+                { name: "Service Areas", href: "#areas" },
+              ].map((item) => (
+                <li key={item.name}>
+                  <LinkNext href={item.href} className="text-secondary font-medium text-sm hover:text-accent hover:translate-x-1 inline-block transition-all duration-300">
+                    {item.name}
+                  </LinkNext>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Newsletter / Contact */}
+          <div className="lg:col-span-1">
+            <h4 className="font-space text-base font-bold uppercase tracking-[0.2em] mb-10 text-accent">Stay Updated</h4>
+            <p className="text-secondary text-sm mb-6 font-medium">
+              Subscribe for home maintenance tips and seasonal offers.
+            </p>
+            <div className="relative mb-8">
+              <input 
+                type="email" 
+                placeholder="Your email address" 
+                className="w-full bg-bg-off/80 border border-border-subtle px-5 py-4 rounded-[4px] text-sm focus:outline-none focus:border-accent transition-colors"
+              />
+              <button className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#C8A96E] rounded-[4px] flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                <Send size={16} />
+              </button>
+            </div>
+            
+            <div className="space-y-4 pt-4">
+              <div className="flex items-center space-x-3 text-primary/80 group cursor-pointer">
+                <div className="w-8 h-8 rounded-[4px] bg-bg-off border border-border-subtle flex items-center justify-center group-hover:bg-[#C8A96E] transition-all duration-300">
+                  <Phone size={14} className="group-hover:text-primary" />
+                </div>
+                <span className="text-sm font-bold group-hover:text-accent transition-colors">+1 (123) 123-1234</span>
+              </div>
+              <div className="flex items-center space-x-3 text-primary/80 group cursor-pointer">
+                <div className="w-8 h-8 rounded-[4px] bg-bg-off border border-border-subtle flex items-center justify-center group-hover:bg-[#C8A96E] transition-all duration-300">
+                  <Mail size={14} className="group-hover:text-primary" />
+                </div>
+                <span className="text-sm font-bold group-hover:text-accent transition-colors">hello@procraft.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-12 border-t border-border-subtle flex flex-col md:flex-row justify-between items-center gap-8">
+          <p className="text-secondary/60 text-[11px] font-bold uppercase tracking-widest">
+            © {currentYear} ProCraft Home Services. Crafted with excellence.
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-12">
+            {[
+              { label: "Licensed", value: "FL-12345" },
+              { label: "Insured", value: "$2M Liability" },
+              { label: "Warranty", value: "2 Years" },
+            ].map((stat, i) => (
+              <div key={i} className="flex flex-col">
+                <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-accent mb-1">{stat.label}</span>
+                <span className="text-[11px] font-bold text-primary/80">{stat.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
