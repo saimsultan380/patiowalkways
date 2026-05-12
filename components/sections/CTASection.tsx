@@ -30,8 +30,8 @@ export default function CTASection() {
           <SectionLabel className="justify-center text-white">
             START YOUR PROJECT
           </SectionLabel>
-          <h2 className="text-5xl md:text-6xl lg:text-8xl font-playfair italic text-white mb-8">
-            Ready to Transform Your <span className="text-[#C8A96E]">Home?</span>
+          <h2 className="text-5xl md:text-6xl lg:text-8xl font-space font-bold tracking-tight text-white mb-8">
+            Ready to Transform Your <span className="text-accent">Home?</span>
           </h2>
           <p className="text-white/80 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-medium">
             Free on-site quote · No obligation · Response within 2 hours
@@ -48,7 +48,7 @@ export default function CTASection() {
 
           <div className="text-white">
             <p className="text-xs font-bold uppercase tracking-widest text-white/50 mb-4">Direct Line</p>
-            <p className="text-3xl md:text-4xl font-bold">+1 (123) 123-1234</p>
+            <p className="text-3xl md:text-4xl font-space font-bold">+1 (123) 123-1234</p>
           </div>
         </motion.div>
       </div>
