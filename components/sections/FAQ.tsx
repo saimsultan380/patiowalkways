@@ -21,10 +21,10 @@ export default function FAQ() {
           <p className="text-secondary leading-relaxed mb-10 max-w-sm">
             Everything you need to know about our process, pricing, and project timelines.
           </p>
-          
+
           <div className="relative h-[180px] w-full max-w-[240px]">
-            <Image 
-              src="/faq-image..png"
+            <Image
+              src="/faq-image.png"
               alt="FAQ Support"
               fill
               className="object-contain object-left"
