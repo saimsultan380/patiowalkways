@@ -22,13 +22,13 @@ export default function ServiceCard({ name, description, subFeatures, imageSrc, 
     >
       <div className="absolute top-0 left-0 w-full h-[3px] bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-10" />
       
-      <div className="relative h-[340px] w-full">
+      <div className="relative h-[260px] w-full">
         <Image
           src={imageSrc}
           alt={name}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
       </div>
 

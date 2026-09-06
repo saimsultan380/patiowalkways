@@ -12,28 +12,27 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-32 bg-bg-off">
       <div className="max-w-[1320px] mx-auto px-6 flex flex-col lg:flex-row gap-20">
-        {/* Left Column */}
         <div className="w-full lg:w-[40%]">
-          <SectionLabel>FAQ</SectionLabel>
+          <SectionLabel>FREQUENTLY ASKED QUESTIONS</SectionLabel>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
-            Questions We Get Asked <span className="text-accent">Most</span>
+            Outdoor Project Questions,{" "}
+            <span className="text-accent">Answered</span>
           </h2>
           <p className="text-secondary leading-relaxed mb-10 max-w-sm">
-            Everything you need to know about our process, pricing, and project timelines.
+            Everything you need to know about our patio, paver, hardscaping, and outdoor living services in Charlotte.
           </p>
 
-          <div className="relative h-[180px] w-full max-w-[240px]">
+          <div className="relative h-[180px] w-full max-w-[240px] rounded-[4px] overflow-hidden">
             <Image
-              src="/faq-image.png"
-              alt="FAQ Support"
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=480&auto=format&fit=crop"
+              alt="Outdoor patio FAQ"
               fill
-              className="object-contain object-left"
+              className="object-cover"
               sizes="240px"
             />
           </div>
         </div>
 
-        {/* Right Column - Accordion */}
         <div className="w-full lg:w-[60%] bg-white p-4 md:p-10 border border-border-subtle shadow-sm rounded-[4px]">
           {faqs.map((faq, index) => (
             <AccordionItem

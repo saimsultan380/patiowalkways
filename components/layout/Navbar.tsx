@@ -11,8 +11,8 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Services", href: "#services" },
+    { name: "Patios", href: "#patios" },
     { name: "How It Works", href: "#how-it-works" },
-    { name: "Projects", href: "#projects" },
     { name: "Areas", href: "#areas" },
     { name: "Reviews", href: "#reviews" },
     { name: "Contact", href: "#contact" },
@@ -22,12 +22,10 @@ export default function Navbar() {
     <>
       <nav className="sticky top-0 left-0 w-full z-50 bg-white border-b border-border-subtle py-4">
         <div className="max-w-[1320px] mx-auto px-6 flex items-center justify-between">
-          {/* Logo */}
           <Link href="/" className="text-xl font-extrabold tracking-tight text-primary transition-colors duration-300">
-            Pro<span className="text-accent underline decoration-1 underline-offset-4">Craft</span>
+            Patio<span className="text-accent underline decoration-1 underline-offset-4">Living</span>
           </Link>
 
-          {/* Desktop Links */}
           <div className="hidden lg:flex items-center space-x-10">
             {navLinks.map((link) => (
               <Link
@@ -40,14 +38,12 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Right Action */}
           <div className="hidden lg:block">
-            <Button className="px-6 py-3">
-              Get Free Quote
+            <Button className="px-6 py-3" onClick={() => document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })}>
+              Get Free Estimates
             </Button>
           </div>
 
-          {/* Mobile Menu Toggle */}
           <button
             className="lg:hidden text-primary transition-colors duration-300"
             onClick={() => setIsMobileMenuOpen(true)}
@@ -57,7 +53,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -68,7 +63,7 @@ export default function Navbar() {
             className="fixed inset-0 z-[60] bg-primary flex flex-col p-10"
           >
             <div className="flex justify-between items-center mb-16">
-              <span className="text-xl font-extrabold text-white">ProCraft</span>
+              <span className="text-xl font-extrabold text-white">PatioLiving</span>
               <button onClick={() => setIsMobileMenuOpen(false)} className="text-white">
                 <X size={32} />
               </button>
@@ -94,8 +89,14 @@ export default function Navbar() {
             </div>
 
             <div className="mt-auto">
-              <Button className="w-full py-6 text-lg bg-white text-primary">
-                Get Free Quote
+              <Button
+                className="w-full py-6 text-lg bg-white text-primary"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  document.getElementById("book")?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Get Free Estimates
               </Button>
             </div>
           </motion.div>

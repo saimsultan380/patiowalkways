@@ -18,8 +18,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "ProCraft | Professional Plumbing, Painting, Tiling & Carpentry",
-  description: "Expert tradespeople for your home renovation needs. Quality craftsmanship in plumbing, painting, tiling, and carpentry.",
+  title: "PatioLiving | Outdoor Living, Hardscaping & Landscaping Charlotte",
+  description:
+    "Transform your Charlotte property with expert patio, paver, walkway, driveway, and outdoor living services. Custom patios, hardscaping, landscaping, and more within a 60-mile radius of Charlotte.",
 };
 
 export default function RootLayout({

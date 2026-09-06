@@ -3,36 +3,34 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionLabel from "@/components/ui/SectionLabel";
-
-const areas = ["Mexico", "North Carolina", "Morelia", "Charlotte", "Queretaro", "Raleigh"];
+import { areas, brand } from "@/data/content";
 
 export default function ServiceAreas() {
   return (
     <section id="areas" className="py-32 bg-primary text-white overflow-hidden">
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-20 items-start">
-          {/* Left Column */}
           <div className="w-full lg:w-1/2">
-            <SectionLabel className="text-white/60">SERVICE AREAS</SectionLabel>
+            <SectionLabel className="text-white/60">AREAS</SectionLabel>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-space font-bold leading-tight mb-8">
-              We Work in <span className="text-accent">Mexico & North Carolina</span>
+              Serving Charlotte &{" "}
+              <span className="text-accent">Surrounding Communities</span>
             </h2>
             <p className="text-muted text-lg leading-relaxed max-w-xl mb-12">
-              From our roots in Mexico to our expansion in North Carolina, ProCraft provides top-tier renovation services across borders.
+              Serving a {brand.radius} to make travel and material logistics easier. If you are nearby but outside these communities, contact us with your project location.
             </p>
             
             <div className="relative w-full max-w-2xl h-[250px] md:h-[450px]">
               <Image 
-                src="/service-area.png"
-                alt="Service Locations"
+                src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1200&auto=format&fit=crop"
+                alt="Charlotte and surrounding service areas"
                 fill
-                className="object-contain object-left"
+                className="object-cover object-center rounded-[4px] opacity-80"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
               />
             </div>
           </div>
 
-          {/* Right Column - Typographic Areas */}
           <div className="w-full lg:w-1/2">
             <div className="flex flex-col">
               {areas.map((area, index) => (

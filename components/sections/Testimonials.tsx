@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ArrowLeft, ArrowRight, Star, CheckCircle2 } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
@@ -16,15 +16,15 @@ export default function Testimonials() {
   return (
     <section id="reviews" className="py-32 bg-bg-off/30 overflow-hidden">
       <div className="max-w-[1320px] mx-auto px-6">
-        {/* Header Row */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div>
-            <SectionLabel>CLIENT REVIEWS</SectionLabel>
-            <h2 className="text-4xl md:text-5xl font-space font-bold">What Our <span className="text-accent">Clients Say</span></h2>
+            <SectionLabel>WHAT OUR CUSTOMERS SAY</SectionLabel>
+            <h2 className="text-4xl md:text-5xl font-space font-bold">
+              Real Results from <span className="text-accent">Charlotte Homeowners</span>
+            </h2>
           </div>
 
           <div className="flex flex-col items-end gap-4">
-            {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-3">
               <button
                 onClick={() => swiperRef.current?.slidePrev()}
@@ -42,7 +42,6 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Slider */}
         <div>
           <Swiper
             spaceBetween={30}
@@ -57,7 +56,6 @@ export default function Testimonials() {
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
                 <div className="bg-white p-8 rounded-[4px] shadow-sm border border-border-subtle h-full flex flex-col relative transition-all duration-300 hover:shadow-xl hover:shadow-primary/5">
-                  {/* Avatar + Name Row */}
                   <div className="flex items-center space-x-4 mb-6">
                     <div className="relative flex-shrink-0">
                       <div className="w-16 h-16 rounded-full p-1 border border-[#C8A96E]/30 bg-white">
@@ -77,7 +75,6 @@ export default function Testimonials() {
                           )}
                         </div>
                       </div>
-                      {/* Google G Badge */}
                       <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-md border border-bg-off z-10 p-[3px]">
                         <svg viewBox="0 0 24 24" className="w-full h-full">
                           <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -96,8 +93,7 @@ export default function Testimonials() {
                     </div>
                   </div>
 
-                  {/* Stars */}
-                  <div className="flex space-x-1 mb-5">
+                  <div className="flex space-x-1 mb-3">
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
@@ -107,8 +103,12 @@ export default function Testimonials() {
                     ))}
                   </div>
 
+                  {testimonial.title && (
+                    <p className="text-sm font-bold text-primary mb-3">{testimonial.title}</p>
+                  )}
+
                   <p className="text-secondary text-sm leading-relaxed mb-6 flex-grow">
-                    "{testimonial.text}"
+                    &ldquo;{testimonial.text}&rdquo;
                   </p>
 
                   <div className="flex items-center justify-between pt-5 border-t border-bg-off mt-auto">
@@ -122,7 +122,6 @@ export default function Testimonials() {
             ))}
           </Swiper>
 
-          {/* Mobile Navigation — below slider, hidden on md+ */}
           <div className="flex md:hidden space-x-4 justify-center mt-8">
             <button
               onClick={() => swiperRef.current?.slidePrev()}

@@ -1,7 +1,8 @@
 "use client";
 
 import LinkNext from "next/link";
-import { Globe, Phone, Mail, Send } from "lucide-react";
+import { Globe, Phone, Mail } from "lucide-react";
+import { brand, services, areas } from "@/data/content";
 
 const SocialIcon = ({ name }: { name: string }) => {
   const icons: Record<string, React.ReactNode> = {
@@ -33,21 +34,20 @@ const SocialIcon = ({ name }: { name: string }) => {
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const footerServices = services.slice(0, 6).map((s) => s.name.replace(" Charlotte, NC", ""));
 
   return (
     <footer className="bg-white text-primary pt-32 pb-12 overflow-hidden relative border-t border-border-subtle">
-      {/* Decorative background element */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-bg-off/50 -skew-x-12 translate-x-1/2 pointer-events-none" />
 
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-12 mb-20">
-          {/* Brand & Info */}
           <div className="lg:col-span-1">
             <LinkNext href="/" className="text-3xl font-space font-extrabold tracking-tight mb-8 block">
-              Pro<span className="text-accent underline decoration-1 underline-offset-8">Craft</span>
+              Patio<span className="text-accent underline decoration-1 underline-offset-8">Living</span>
             </LinkNext>
             <p className="text-secondary text-sm leading-relaxed mb-10 max-w-xs font-medium">
-              Setting the standard for premium home maintenance. From flawless tiling to expert plumbing, we deliver craftsmanship that lasts a lifetime.
+              Transform your Charlotte property with expert patio, paver, walkway, driveway, and outdoor living services built to last.
             </p>
             <div className="flex space-x-4">
               {[
@@ -67,13 +67,12 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div className="lg:col-span-1">
             <h4 className="font-space text-base font-bold uppercase tracking-[0.2em] mb-10 text-accent">Services</h4>
             <ul className="space-y-4">
-              {["Tiles Installation", "Plumbing Services", "Carpentry & Woodwork", "Interior Painting"].map((item) => (
+              {footerServices.map((item) => (
                 <li key={item}>
-                  <LinkNext href="#" className="text-secondary font-medium text-sm hover:text-accent hover:translate-x-1 inline-block transition-all duration-300">
+                  <LinkNext href="#services" className="text-secondary font-medium text-sm hover:text-accent hover:translate-x-1 inline-block transition-all duration-300">
                     {item}
                   </LinkNext>
                 </li>
@@ -81,13 +80,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company Links */}
           <div className="lg:col-span-1">
             <h4 className="font-space text-base font-bold uppercase tracking-[0.2em] mb-10 text-accent">Company</h4>
             <ul className="space-y-4">
               {[
-                { name: "How It Works", href: "#how-it-works" },
-                { name: "Recent Projects", href: "#projects" },
+                { name: "How We Work", href: "#how-it-works" },
+                { name: "Types of Patios", href: "#patios" },
                 { name: "Why Choose Us", href: "#why-us" },
                 { name: "Client Reviews", href: "#reviews" },
                 { name: "Service Areas", href: "#areas" },
@@ -101,51 +99,46 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter / Contact */}
           <div className="lg:col-span-1">
-            <h4 className="font-space text-base font-bold uppercase tracking-[0.2em] mb-10 text-accent">Stay Updated</h4>
+            <h4 className="font-space text-base font-bold uppercase tracking-[0.2em] mb-10 text-accent">Service Area</h4>
             <p className="text-secondary text-sm mb-6 font-medium">
-              Subscribe for home maintenance tips and seasonal offers.
+              Serving a {brand.radius} to make travel and material logistics easier.
             </p>
-            <div className="relative mb-8">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                className="w-full bg-bg-off/80 border border-border-subtle px-5 py-4 rounded-[4px] text-sm focus:outline-none focus:border-accent transition-colors"
-              />
-              <button className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#C8A96E] rounded-[4px] flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300">
-                <Send size={16} />
-              </button>
-            </div>
+            <ul className="space-y-2 mb-8">
+              {areas.map((area) => (
+                <li key={area} className="text-secondary text-sm font-medium">
+                  {area}
+                </li>
+              ))}
+            </ul>
             
             <div className="space-y-4 pt-4">
               <div className="flex items-center space-x-3 text-primary/80 group cursor-pointer">
                 <div className="w-8 h-8 rounded-[4px] bg-bg-off border border-border-subtle flex items-center justify-center group-hover:bg-[#C8A96E] transition-all duration-300">
                   <Phone size={14} className="group-hover:text-primary" />
                 </div>
-                <span className="text-sm font-bold group-hover:text-accent transition-colors">+1 (123) 123-1234</span>
+                <span className="text-sm font-bold group-hover:text-accent transition-colors">{brand.phone}</span>
               </div>
               <div className="flex items-center space-x-3 text-primary/80 group cursor-pointer">
                 <div className="w-8 h-8 rounded-[4px] bg-bg-off border border-border-subtle flex items-center justify-center group-hover:bg-[#C8A96E] transition-all duration-300">
                   <Mail size={14} className="group-hover:text-primary" />
                 </div>
-                <span className="text-sm font-bold group-hover:text-accent transition-colors">hello@procraft.com</span>
+                <span className="text-sm font-bold group-hover:text-accent transition-colors">{brand.email}</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="pt-12 border-t border-border-subtle flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-secondary/60 text-[11px] font-bold uppercase tracking-widest">
-            © {currentYear} ProCraft Home Services. Crafted with excellence.
+            © {currentYear} PatioLiving. Outdoor living built for Charlotte.
           </p>
           
           <div className="flex flex-wrap justify-center gap-6 lg:gap-12">
             {[
-              { label: "Licensed", value: "FL-12345" },
-              { label: "Insured", value: "$2M Liability" },
-              { label: "Warranty", value: "2 Years" },
+              { label: "Focus", value: "Outdoor Living" },
+              { label: "Coverage", value: "60-Mile Radius" },
+              { label: "Estimates", value: "Free" },
             ].map((stat, i) => (
               <div key={i} className="flex flex-col">
                 <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-accent mb-1">{stat.label}</span>

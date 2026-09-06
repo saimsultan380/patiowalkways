@@ -1,18 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { PhoneCall, Calendar, ClipboardList, FileText, Hammer, CheckCircle2 } from "lucide-react";
+import { MessageSquare, PencilRuler, FileText, Hammer, Smile } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Button from "@/components/ui/Button";
 import { steps } from "@/data/content";
 
 const stepIcons = [
-  <PhoneCall size={22} />,
-  <Calendar size={22} />,
-  <ClipboardList size={22} />,
-  <FileText size={22} />,
-  <Hammer size={22} />,
-  <CheckCircle2 size={22} />,
+  <MessageSquare size={22} key="1" />,
+  <PencilRuler size={22} key="2" />,
+  <FileText size={22} key="3" />,
+  <Hammer size={22} key="4" />,
+  <Smile size={22} key="5" />,
 ];
 
 export default function HowItWorks() {
@@ -21,13 +20,13 @@ export default function HowItWorks() {
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="flex flex-col lg:flex-row justify-between lg:items-end items-start mb-16 lg:mb-24 gap-6 lg:gap-8">
           <div className="max-w-2xl text-left">
-            <SectionLabel>THE PROCESS</SectionLabel>
+            <SectionLabel>HOW WE WORK</SectionLabel>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-space font-bold mt-4 leading-tight">
-              Our Simple <span className="text-accent">6-Step</span> Process
+              Our Simple <span className="text-accent">5-Step</span> Process
             </h2>
           </div>
           <p className="text-secondary text-sm md:text-base max-w-sm lg:mb-2 text-left">
-            We've refined our workflow over a decade to ensure every project is delivered on time, on budget, and beyond expectations.
+            From your first ideas to a finished outdoor space, we keep the process clear, collaborative, and focused on lasting results.
           </p>
         </div>
 
@@ -41,7 +40,6 @@ export default function HowItWorks() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative flex flex-col"
             >
-              {/* Background Number */}
               <span className="absolute -top-6 lg:-top-10 -left-4 text-6xl lg:text-8xl font-black text-bg-off/60 pointer-events-none select-none transition-colors duration-500 group-hover:text-accent/10">
                 0{index + 1}
               </span>
@@ -69,8 +67,11 @@ export default function HowItWorks() {
           <div className="w-full h-[1px] bg-border-subtle mb-16" />
           <div className="flex flex-col sm:flex-row items-center gap-8">
             <p className="text-sm font-bold text-primary uppercase tracking-widest">Ready to start step one?</p>
-            <Button className="px-12">
-              Book Your Free Site Visit <span className="ml-2">→</span>
+            <Button
+              className="px-12"
+              onClick={() => document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              Get Your Free Estimate <span className="ml-2">→</span>
             </Button>
           </div>
         </div>

@@ -1,12 +1,12 @@
-import { CheckCircle2, TrendingUp, Sparkles, Shield, Zap, Box } from "lucide-react";
+import { Layout, ShieldCheck, Hammer, Home, Award, MapPin } from "lucide-react";
 
 const benefits = [
-  { label: "Property Value", icon: <TrendingUp size={16} /> },
-  { label: "Long-Lasting", icon: <Shield size={16} /> },
-  { label: "Optimized Space", icon: <Box size={16} /> },
-  { label: "Damage Protection", icon: <CheckCircle2 size={16} /> },
-  { label: "Modern Design", icon: <Sparkles size={16} /> },
-  { label: "Clean Install", icon: <Zap size={16} /> },
+  { label: "Custom Patio Designs", icon: <Layout size={16} /> },
+  { label: "Quality Paver Installs", icon: <ShieldCheck size={16} /> },
+  { label: "Durable Hardscaping", icon: <Hammer size={16} /> },
+  { label: "Complete Outdoor Living", icon: <Home size={16} /> },
+  { label: "Expert Craftsmanship", icon: <Award size={16} /> },
+  { label: "Charlotte Area Service", icon: <MapPin size={16} /> },
 ];
 
 export default function BenefitsStrip() {
