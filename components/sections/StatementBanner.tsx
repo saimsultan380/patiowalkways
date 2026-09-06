@@ -13,7 +13,7 @@ export default function StatementBanner() {
           backgroundAttachment: 'fixed'
         }}
       >
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-primary/75" />
       </div>
 
       <div className="relative z-10 max-w-[900px] mx-auto px-6 flex flex-col items-center text-center">
@@ -32,11 +32,11 @@ export default function StatementBanner() {
           <div className="flex justify-center space-x-16 md:space-x-24">
             <div className="text-center">
               <p className="text-4xl md:text-5xl font-playfair font-bold text-white mb-2">60mi</p>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-muted">Charlotte Radius</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-white/70">Charlotte Radius</p>
             </div>
             <div className="text-center">
               <p className="text-4xl md:text-5xl font-playfair font-bold text-white mb-2">Full</p>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-muted">Outdoor Solutions</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-white/70">Outdoor Solutions</p>
             </div>
           </div>
         </motion.div>

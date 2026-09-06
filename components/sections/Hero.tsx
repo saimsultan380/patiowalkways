@@ -58,13 +58,14 @@ export default function Hero() {
             className="flex flex-row items-center space-x-4 sm:space-x-8 mb-20"
           >
             <Button
-              className="px-6 sm:px-10 py-4 sm:py-5 text-sm sm:text-base shadow-xl shadow-primary/10 whitespace-nowrap"
+              variant="accent"
+              className="px-6 sm:px-10 py-4 sm:py-5 text-sm sm:text-base shadow-xl shadow-accent/20 whitespace-nowrap"
               onClick={() => document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })}
             >
               Get Free Estimates
             </Button>
             <a href={`tel:${brand.phone.replace(/[^\d+]/g, "")}`}>
-              <Button className="bg-[#C8A96E] text-primary hover:bg-[#C8A96E]/90 px-6 sm:px-10 py-4 sm:py-5 text-sm sm:text-base border-none shadow-xl shadow-accent/5 flex items-center space-x-3">
+              <Button variant="stone" className="px-6 sm:px-10 py-4 sm:py-5 text-sm sm:text-base border-none shadow-xl shadow-stone/20 flex items-center space-x-3">
                 <Phone size={18} />
                 <span>Call Us</span>
               </Button>
@@ -97,9 +98,9 @@ export default function Hero() {
             >
               <Image
                 src={heroImages[currentImage]}
-                alt="Outdoor living and patio services in Charlotte"
+                alt="Patio, paver, and outdoor living services in Charlotte"
                 fill
-                priority
+                priority={currentImage === 0}
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />

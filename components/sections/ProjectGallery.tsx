@@ -34,14 +34,14 @@ export default function ProjectGallery() {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
             
-            <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-8 text-center">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-accent mb-2">
+            <div className="absolute inset-0 bg-primary/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-8 text-center">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-stone mb-2">
                 {project.category}
               </span>
               <h4 className="text-xl font-bold text-white mb-4">
                 {project.title}
               </h4>
-              <span className="text-xs text-white border-b border-white/30 pb-1">
+              <span className="text-xs text-white border-b border-stone/60 pb-1">
                 View Project
               </span>
             </div>

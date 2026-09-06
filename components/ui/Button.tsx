@@ -6,7 +6,7 @@ function cn(...inputs: ClassValue[]) {
 }
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "outline" | "text";
+  variant?: "primary" | "accent" | "stone" | "outline" | "text";
   children: React.ReactNode;
 }
 
@@ -14,7 +14,9 @@ export default function Button({ variant = "primary", children, className, ...pr
   const baseStyles = "inline-flex items-center justify-center px-8 py-4 text-sm font-bold transition-all duration-300 focus:outline-none rounded-[4px]";
   
   const variants = {
-    primary: "bg-primary text-white hover:bg-opacity-90",
+    primary: "bg-primary text-white hover:bg-primary/90",
+    accent: "bg-accent text-white hover:bg-accent/90",
+    stone: "bg-stone text-primary hover:bg-stone/90",
     outline: "border border-white text-white hover:bg-white hover:text-primary",
     text: "p-0 text-primary hover:text-accent border-b border-transparent hover:border-accent"
   };

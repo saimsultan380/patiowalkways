@@ -10,12 +10,12 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Services", href: "#services" },
-    { name: "Patios", href: "#patios" },
-    { name: "How It Works", href: "#how-it-works" },
-    { name: "Areas", href: "#areas" },
-    { name: "Reviews", href: "#reviews" },
-    { name: "Contact", href: "#contact" },
+    { name: "Services", href: "/services" },
+    { name: "Patios", href: "/#patios" },
+    { name: "How It Works", href: "/#how-it-works" },
+    { name: "Areas", href: "/#areas" },
+    { name: "Reviews", href: "/#reviews" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -23,7 +23,7 @@ export default function Navbar() {
       <nav className="sticky top-0 left-0 w-full z-50 bg-white border-b border-border-subtle py-4">
         <div className="max-w-[1320px] mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="text-xl font-extrabold tracking-tight text-primary transition-colors duration-300">
-            Patio<span className="text-accent underline decoration-1 underline-offset-4">Living</span>
+            Patio<span className="text-accent underline decoration-stone decoration-2 underline-offset-4">Living</span>
           </Link>
 
           <div className="hidden lg:flex items-center space-x-10">
@@ -39,7 +39,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:block">
-            <Button className="px-6 py-3" onClick={() => document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })}>
+            <Button variant="accent" className="px-6 py-3" onClick={() => document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })}>
               Get Free Estimates
             </Button>
           </div>
@@ -80,7 +80,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-4xl font-playfair italic text-white hover:text-accent transition-colors"
+                    className="text-4xl font-playfair italic text-white hover:text-stone transition-colors"
                   >
                     {link.name}
                   </Link>

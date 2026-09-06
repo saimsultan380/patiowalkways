@@ -22,8 +22,7 @@ export const services = [
       "Entry Walkways",
       "Luxury Installs",
     ],
-    imageSrc:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+    imageSrc: "/01_patios_walkways_charlotte_nc.jpg",
   },
   {
     id: "pavers",
@@ -38,8 +37,7 @@ export const services = [
       "Pattern Design",
       "Long-Lasting Install",
     ],
-    imageSrc:
-      "https://images.unsplash.com/photo-1600047509807-ba8f99d36775?q=80&w=1200&auto=format&fit=crop",
+    imageSrc: "/02_paver_services_charlotte_nc.jpg",
   },
   {
     id: "driveways",
@@ -54,8 +52,7 @@ export const services = [
       "Site Prep",
       "Smooth Finish",
     ],
-    imageSrc:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop",
+    imageSrc: "/03_driveway_services_charlotte_nc.jpg",
   },
   {
     id: "walls",
@@ -70,8 +67,7 @@ export const services = [
       "Elevation Fixes",
       "Structural Style",
     ],
-    imageSrc:
-      "https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=1200&auto=format&fit=crop",
+    imageSrc: "/04_walls_structural.jpg",
   },
   {
     id: "outdoor-living",
@@ -86,8 +82,7 @@ export const services = [
       "Pergolas & Gazebos",
       "Decks & Arbors",
     ],
-    imageSrc:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200&auto=format&fit=crop",
+    imageSrc: "/05_outdoor_living_features.jpg",
   },
   {
     id: "lighting",
@@ -102,8 +97,7 @@ export const services = [
       "Water Management",
       "Night Ambiance",
     ],
-    imageSrc:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop",
+    imageSrc: "/06_lighting_utilities.jpg",
   },
   {
     id: "landscaping",
@@ -118,8 +112,7 @@ export const services = [
       "Lawn Care",
       "Tree Services",
     ],
-    imageSrc:
-      "https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=1200&auto=format&fit=crop",
+    imageSrc: "/07_landscaping.jpg",
   },
   {
     id: "fences-water",
@@ -134,8 +127,7 @@ export const services = [
       "Yard Character",
       "Visual Appeal",
     ],
-    imageSrc:
-      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1200&auto=format&fit=crop",
+    imageSrc: "/08_fences_water_features.jpg",
   },
   {
     id: "commercial",
@@ -150,8 +142,7 @@ export const services = [
       "Property Upgrades",
       "Custom Plans",
     ],
-    imageSrc:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+    imageSrc: "/09_commercial_services.jpg",
   },
 ];
 
@@ -428,57 +419,52 @@ export const areas = [
 export const projects = [
   {
     id: 1,
-    title: "Custom Paver Patio",
+    title: "Modern Courtyard Transformation",
     category: "Patios",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+    image: "/01_modern_courtyard_transformation.jpg",
     span: "lg:col-span-2 lg:row-span-2",
   },
   {
     id: 2,
-    title: "Natural Stone Walkway",
-    category: "Walkways",
-    image:
-      "https://images.unsplash.com/photo-1600047509807-ba8f99d36775?q=80&w=800&auto=format&fit=crop",
+    title: "Backyard Pool Retreat",
+    category: "Outdoor Living",
+    image: "/02_backyard_pool_retreat.jpg",
     span: "lg:col-span-1 lg:row-span-1",
   },
   {
     id: 3,
-    title: "Outdoor Kitchen",
-    category: "Outdoor Living",
-    image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=800&auto=format&fit=crop",
+    title: "Front Entry Rebuild",
+    category: "Walkways",
+    image: "/03_front_entry_rebuild.jpg",
     span: "lg:col-span-1 lg:row-span-1",
   },
   {
     id: 4,
-    title: "Fire Pit Lounge",
-    category: "Fire Features",
-    image:
-      "https://images.unsplash.com/photo-1470246973918-29a93221c455?q=80&w=800&auto=format&fit=crop",
+    title: "Sloped Garden Terraces",
+    category: "Landscaping",
+    image: "/04_sloped_garden_terraces.jpg",
     span: "lg:col-span-1 lg:row-span-1",
   },
   {
     id: 5,
-    title: "Paver Driveway",
-    category: "Driveways",
-    image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800&auto=format&fit=crop",
+    title: "Rooftop Terrace Garden",
+    category: "Outdoor Living",
+    image: "/05_rooftop_terrace_garden.jpg",
     span: "lg:col-span-1 lg:row-span-1",
   },
   {
     id: 6,
-    title: "Backyard Landscaping",
+    title: "Screened Porch Landscape",
     category: "Landscaping",
-    image:
-      "https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=800&auto=format&fit=crop",
+    image: "/06_screened_porch_landscape.jpg",
     span: "lg:col-span-1 lg:row-span-1",
   },
 ];
 
 export const heroImages = [
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1600047509807-ba8f99d36775?q=80&w=1600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1470246973918-29a93221c455?q=80&w=1600&auto=format&fit=crop",
+  "/01_patios_walkways_charlotte_nc.jpg",
+  "/05_outdoor_living_features.jpg",
+  "/02_paver_services_charlotte_nc.jpg",
+  "/07_landscaping.jpg",
+  "/03_driveway_services_charlotte_nc.jpg",
 ];

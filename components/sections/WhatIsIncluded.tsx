@@ -33,7 +33,7 @@ export default function WhatIsIncluded() {
               key={index}
               className="bg-white p-10 relative group border border-border-subtle/30 hover:border-accent transition-all duration-500 rounded-[4px] shadow-sm hover:shadow-xl hover:shadow-accent/5"
             >
-              <div className="w-16 h-16 mb-8 rounded-[4px] bg-bg-off flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-primary transition-all duration-500">
+              <div className="w-16 h-16 mb-8 rounded-[4px] bg-bg-off flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-500">
                 {icons[index]}
               </div>
               

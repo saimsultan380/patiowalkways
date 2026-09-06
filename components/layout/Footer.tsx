@@ -44,7 +44,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-12 mb-20">
           <div className="lg:col-span-1">
             <LinkNext href="/" className="text-3xl font-space font-extrabold tracking-tight mb-8 block">
-              Patio<span className="text-accent underline decoration-1 underline-offset-8">Living</span>
+              Patio<span className="text-accent underline decoration-stone decoration-2 underline-offset-8">Living</span>
             </LinkNext>
             <p className="text-secondary text-sm leading-relaxed mb-10 max-w-xs font-medium">
               Transform your Charlotte property with expert patio, paver, walkway, driveway, and outdoor living services built to last.
@@ -59,7 +59,7 @@ export default function Footer() {
                 <LinkNext 
                   key={i} 
                   href={social.href}
-                  className="w-10 h-10 rounded-[4px] border border-border-subtle flex items-center justify-center hover:bg-[#C8A96E] hover:border-[#C8A96E] hover:text-primary transition-all duration-300 bg-white shadow-sm"
+                  className="w-10 h-10 rounded-[4px] border border-border-subtle flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white transition-all duration-300 bg-white shadow-sm"
                 >
                   <SocialIcon name={social.name} />
                 </LinkNext>
@@ -72,7 +72,7 @@ export default function Footer() {
             <ul className="space-y-4">
               {footerServices.map((item) => (
                 <li key={item}>
-                  <LinkNext href="#services" className="text-secondary font-medium text-sm hover:text-accent hover:translate-x-1 inline-block transition-all duration-300">
+                  <LinkNext href="/services" className="text-secondary font-medium text-sm hover:text-accent hover:translate-x-1 inline-block transition-all duration-300">
                     {item}
                   </LinkNext>
                 </li>
@@ -84,11 +84,12 @@ export default function Footer() {
             <h4 className="font-space text-base font-bold uppercase tracking-[0.2em] mb-10 text-accent">Company</h4>
             <ul className="space-y-4">
               {[
-                { name: "How We Work", href: "#how-it-works" },
-                { name: "Types of Patios", href: "#patios" },
-                { name: "Why Choose Us", href: "#why-us" },
-                { name: "Client Reviews", href: "#reviews" },
-                { name: "Service Areas", href: "#areas" },
+                { name: "All Services", href: "/services" },
+                { name: "How We Work", href: "/#how-it-works" },
+                { name: "Types of Patios", href: "/#patios" },
+                { name: "Why Choose Us", href: "/#why-us" },
+                { name: "Client Reviews", href: "/#reviews" },
+                { name: "Service Areas", href: "/#areas" },
               ].map((item) => (
                 <li key={item.name}>
                   <LinkNext href={item.href} className="text-secondary font-medium text-sm hover:text-accent hover:translate-x-1 inline-block transition-all duration-300">
@@ -114,13 +115,13 @@ export default function Footer() {
             
             <div className="space-y-4 pt-4">
               <div className="flex items-center space-x-3 text-primary/80 group cursor-pointer">
-                <div className="w-8 h-8 rounded-[4px] bg-bg-off border border-border-subtle flex items-center justify-center group-hover:bg-[#C8A96E] transition-all duration-300">
+                <div className="w-8 h-8 rounded-[4px] bg-bg-off border border-border-subtle flex items-center justify-center group-hover:bg-stone transition-all duration-300">
                   <Phone size={14} className="group-hover:text-primary" />
                 </div>
                 <span className="text-sm font-bold group-hover:text-accent transition-colors">{brand.phone}</span>
               </div>
               <div className="flex items-center space-x-3 text-primary/80 group cursor-pointer">
-                <div className="w-8 h-8 rounded-[4px] bg-bg-off border border-border-subtle flex items-center justify-center group-hover:bg-[#C8A96E] transition-all duration-300">
+                <div className="w-8 h-8 rounded-[4px] bg-bg-off border border-border-subtle flex items-center justify-center group-hover:bg-stone transition-all duration-300">
                   <Mail size={14} className="group-hover:text-primary" />
                 </div>
                 <span className="text-sm font-bold group-hover:text-accent transition-colors">{brand.email}</span>

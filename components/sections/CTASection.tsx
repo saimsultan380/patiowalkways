@@ -6,7 +6,21 @@ import Button from "@/components/ui/Button";
 import SectionLabel from "@/components/ui/SectionLabel";
 import { brand } from "@/data/content";
 
-export default function CTASection() {
+interface CTASectionProps {
+  label?: string;
+  title?: React.ReactNode;
+  description?: string;
+  primaryCta?: string;
+  secondaryCta?: string;
+}
+
+export default function CTASection({
+  label = "LET'S BUILD YOUR DREAM OUTDOOR SPACE",
+  title,
+  description = "Turn your ideas into a beautiful, functional outdoor space designed for your home. From custom patios and pavers to walkways, driveways, outdoor living features, and complete landscaping, our team is ready to bring your vision to life.",
+  primaryCta = "Get Your Free Estimate",
+  secondaryCta = "Start Your Project",
+}: CTASectionProps) {
   return (
     <section id="contact" className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
@@ -28,35 +42,40 @@ export default function CTASection() {
           transition={{ duration: 0.8 }}
         >
           <SectionLabel className="justify-center text-white">
-            LET&apos;S BUILD YOUR DREAM OUTDOOR SPACE
+            {label}
           </SectionLabel>
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-space font-bold tracking-tight text-white mb-8">
-            Make Your Outdoor Space{" "}
-            <span className="text-accent">Something to Enjoy</span>
+            {title ?? (
+              <>
+                Make Your Outdoor Space{" "}
+                <span className="text-stone">Something to Enjoy</span>
+              </>
+            )}
           </h2>
           <p className="text-white/80 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-medium">
-            Turn your ideas into a beautiful, functional outdoor space designed for your home. From custom patios and pavers to walkways, driveways, outdoor living features, and complete landscaping, our team is ready to bring your vision to life.
+            {description}
           </p>
 
           <div className="flex flex-row items-center justify-center space-x-3 sm:space-x-6 mb-12">
             <Button
-              className="flex-1 sm:flex-none bg-[#C8A96E] text-primary hover:bg-[#C8A96E]/90 px-4 sm:px-12 border-none text-sm sm:text-base"
+              variant="stone"
+              className="flex-1 sm:flex-none px-4 sm:px-12 border-none text-sm sm:text-base"
               onClick={() => document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })}
             >
-              Get Your Free Estimate
+              {primaryCta}
             </Button>
             <Button
               variant="outline"
-              className="flex-1 sm:flex-none px-4 sm:px-12 text-sm sm:text-base"
+              className="flex-1 sm:flex-none px-4 sm:px-12 text-sm sm:text-base border-white/70 text-white hover:bg-white hover:text-primary"
               onClick={() => document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })}
             >
-              Start Your Project
+              {secondaryCta}
             </Button>
           </div>
 
           <div className="text-white">
             <p className="text-xs font-bold uppercase tracking-widest text-white/50 mb-4">Call Us</p>
-            <a href={`tel:${brand.phone.replace(/[^\d+]/g, "")}`} className="text-3xl md:text-4xl font-space font-bold hover:text-accent transition-colors">
+            <a href={`tel:${brand.phone.replace(/[^\d+]/g, "")}`} className="text-3xl md:text-4xl font-space font-bold hover:text-stone transition-colors">
               {brand.phone}
             </a>
           </div>

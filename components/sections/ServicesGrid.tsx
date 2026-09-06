@@ -30,7 +30,10 @@ export default function ServicesGrid() {
             <ServiceCard
               key={service.id}
               index={index}
-              {...service}
+              name={service.name}
+              description={service.description}
+              imageSrc={service.imageSrc}
+              href={`/services#${service.id}`}
             />
           ))}
         </div>

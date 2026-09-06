@@ -1,12 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #111111;
-  --color-secondary: #555555;
-  --color-muted: #999999;
-  --color-bg-off: #F5F4F1;
-  --color-accent: #C8A96E;
-  --color-border-subtle: #E5E5E5;
+  /* Deep forest charcoal — hardscape structure */
+  --color-primary: #1A2F26;
+  --color-secondary: #4A5C52;
+  --color-muted: #8A9A90;
+  /* Soft garden mist background */
+  --color-bg-off: #F1F5F1;
+  /* Living green — landscaping / growth */
+  --color-accent: #3D7A5A;
+  /* Warm sandstone — pavers / stone */
+  --color-stone: #C4A574;
+  --color-border-subtle: #DCE5DE;
   
   --font-inter: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-playfair: var(--font-playfair), ui-serif, Georgia, serif;
@@ -15,7 +20,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #111111;
+  --foreground: #1A2F26;
 }
 
 body {

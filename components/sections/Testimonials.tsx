@@ -10,7 +10,17 @@ import type { Swiper as SwiperType } from "swiper";
 
 import "swiper/css";
 
-export default function Testimonials() {
+type Testimonial = (typeof testimonials)[number];
+
+interface TestimonialsProps {
+  items?: Testimonial[];
+  title?: React.ReactNode;
+}
+
+export default function Testimonials({
+  items = testimonials,
+  title,
+}: TestimonialsProps) {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
@@ -20,7 +30,11 @@ export default function Testimonials() {
           <div>
             <SectionLabel>WHAT OUR CUSTOMERS SAY</SectionLabel>
             <h2 className="text-4xl md:text-5xl font-space font-bold">
-              Real Results from <span className="text-accent">Charlotte Homeowners</span>
+              {title ?? (
+                <>
+                  Real Results from <span className="text-accent">Charlotte Homeowners</span>
+                </>
+              )}
             </h2>
           </div>
 
@@ -53,13 +67,13 @@ export default function Testimonials() {
             }}
             className="!pb-4"
           >
-            {testimonials.map((testimonial) => (
+            {items.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
                 <div className="bg-white p-8 rounded-[4px] shadow-sm border border-border-subtle h-full flex flex-col relative transition-all duration-300 hover:shadow-xl hover:shadow-primary/5">
                   <div className="flex items-center space-x-4 mb-6">
                     <div className="relative flex-shrink-0">
-                      <div className="w-16 h-16 rounded-full p-1 border border-[#C8A96E]/30 bg-white">
-                        <div className="w-full h-full rounded-full overflow-hidden relative border border-[#C8A96E]/20">
+                      <div className="w-16 h-16 rounded-full p-1 border border-stone/40 bg-white">
+                        <div className="w-full h-full rounded-full overflow-hidden relative border border-stone/30">
                           {testimonial.image ? (
                             <Image
                               src={testimonial.image}

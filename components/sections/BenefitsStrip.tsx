@@ -16,7 +16,7 @@ export default function BenefitsStrip() {
         {benefits.map((benefit, index) => (
           <div key={index} className="flex items-center space-x-12 first:ml-0 last:mr-0">
             <div className="flex items-center space-x-3">
-              <span className="text-accent">{benefit.icon}</span>
+              <span className="text-stone">{benefit.icon}</span>
               <span className="text-[13px] font-bold text-white uppercase tracking-widest whitespace-nowrap">
                 {benefit.label}
               </span>

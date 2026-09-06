@@ -20,15 +20,15 @@ export default function StatsMarquee() {
           {[...stats, ...stats, ...stats, ...stats].map((stat, i) => (
             <div key={i} className="flex items-center">
               <div className="flex items-baseline space-x-6 px-16">
-                <span className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-white italic">
+                <span className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-stone italic">
                   {stat.value}
                 </span>
-                <span className="text-[11px] md:text-xs font-bold uppercase tracking-[0.2em] text-muted whitespace-nowrap">
+                <span className="text-[11px] md:text-xs font-bold uppercase tracking-[0.2em] text-white/70 whitespace-nowrap">
                   {stat.label}
                 </span>
               </div>
               {/* Vertical Separator */}
-              <div className="w-[1px] h-10 bg-accent/30" />
+              <div className="w-[1px] h-10 bg-stone/40" />
             </div>
           ))}
         </motion.div>

@@ -32,7 +32,7 @@ export default function BookForm() {
                 href={`tel:${brand.phone.replace(/[^\d+]/g, "")}`}
                 className="flex items-center space-x-4 group"
               >
-                <div className="w-12 h-12 rounded-[4px] bg-primary text-white flex items-center justify-center group-hover:bg-accent group-hover:text-primary transition-colors">
+                <div className="w-12 h-12 rounded-[4px] bg-primary text-white flex items-center justify-center group-hover:bg-stone group-hover:text-primary transition-colors">
                   <Phone size={18} />
                 </div>
                 <div>
@@ -97,7 +97,7 @@ export default function BookForm() {
                     required
                   />
                 </div>
-                <Button type="submit" className="w-full py-5">
+                <Button type="submit" variant="accent" className="w-full py-5">
                   Start Your Project
                 </Button>
               </>

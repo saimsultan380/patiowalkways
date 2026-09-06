@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageSquare, PencilRuler, FileText, Hammer, Smile } from "lucide-react";
+import { MessageSquare, PencilRuler, FileText, Hammer, Smile, ClipboardCheck } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Button from "@/components/ui/Button";
 import { steps } from "@/data/content";
 
-const stepIcons = [
+const defaultIcons = [
   <MessageSquare size={22} key="1" />,
   <PencilRuler size={22} key="2" />,
   <FileText size={22} key="3" />,
@@ -14,24 +14,54 @@ const stepIcons = [
   <Smile size={22} key="5" />,
 ];
 
-export default function HowItWorks() {
+const servicesIcons = [
+  <MessageSquare size={22} key="1" />,
+  <PencilRuler size={22} key="2" />,
+  <FileText size={22} key="3" />,
+  <Hammer size={22} key="4" />,
+  <ClipboardCheck size={22} key="5" />,
+];
+
+type Step = { title: string; description: string };
+
+interface HowItWorksProps {
+  label?: string;
+  title?: React.ReactNode;
+  description?: string;
+  items?: Step[];
+  ctaLabel?: string;
+}
+
+export default function HowItWorks({
+  label = "HOW WE WORK",
+  title,
+  description = "From your first ideas to a finished outdoor space, we keep the process clear, collaborative, and focused on lasting results.",
+  items = steps,
+  ctaLabel = "Get Your Free Estimate",
+}: HowItWorksProps) {
+  const icons = items.length === 5 && items[4]?.title === "Final Walkthrough" ? servicesIcons : defaultIcons;
+
   return (
     <section id="how-it-works" className="py-32 bg-bg-off/50">
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="flex flex-col lg:flex-row justify-between lg:items-end items-start mb-16 lg:mb-24 gap-6 lg:gap-8">
           <div className="max-w-2xl text-left">
-            <SectionLabel>HOW WE WORK</SectionLabel>
+            <SectionLabel>{label}</SectionLabel>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-space font-bold mt-4 leading-tight">
-              Our Simple <span className="text-accent">5-Step</span> Process
+              {title ?? (
+                <>
+                  Our Simple <span className="text-accent">5-Step</span> Process
+                </>
+              )}
             </h2>
           </div>
           <p className="text-secondary text-sm md:text-base max-w-sm lg:mb-2 text-left">
-            From your first ideas to a finished outdoor space, we keep the process clear, collaborative, and focused on lasting results.
+            {description}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
-          {steps.map((step, index) => (
+          {items.map((step, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -46,15 +76,15 @@ export default function HowItWorks() {
 
               <div className="relative pt-4">
                 <div className="w-12 h-12 bg-primary text-white flex items-center justify-center mb-8 rounded-[4px] group-hover:bg-accent transition-colors duration-300">
-                  {stepIcons[index]}
+                  {icons[index] ?? defaultIcons[index % defaultIcons.length]}
                 </div>
-                
+
                 <h4 className="text-xl font-bold mb-4 flex items-center gap-3">
                   {step.title}
                 </h4>
-                
-                <div className="w-12 h-[2px] bg-accent mb-6 transform origin-left transition-transform duration-500 group-hover:scale-x-150" />
-                
+
+                <div className="w-12 h-[2px] bg-stone mb-6 transform origin-left transition-transform duration-500 group-hover:scale-x-150 group-hover:bg-accent" />
+
                 <p className="text-secondary text-sm leading-relaxed max-w-[280px]">
                   {step.description}
                 </p>
@@ -68,10 +98,11 @@ export default function HowItWorks() {
           <div className="flex flex-col sm:flex-row items-center gap-8">
             <p className="text-sm font-bold text-primary uppercase tracking-widest">Ready to start step one?</p>
             <Button
+              variant="accent"
               className="px-12"
               onClick={() => document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })}
             >
-              Get Your Free Estimate <span className="ml-2">→</span>
+              {ctaLabel} <span className="ml-2">→</span>
             </Button>
           </div>
         </div>

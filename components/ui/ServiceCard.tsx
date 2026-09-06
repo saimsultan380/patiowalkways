@@ -1,17 +1,18 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 interface ServiceCardProps {
   name: string;
   description: string;
-  subFeatures: string[];
   imageSrc: string;
   index: number;
+  href?: string;
 }
 
-export default function ServiceCard({ name, description, subFeatures, imageSrc, index }: ServiceCardProps) {
+export default function ServiceCard({ name, description, imageSrc, index, href = "/services" }: ServiceCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -34,24 +35,15 @@ export default function ServiceCard({ name, description, subFeatures, imageSrc, 
 
       <div className="p-8 flex flex-col flex-grow">
         <h3 className="text-2xl font-bold mb-3">{name}</h3>
-        <p className="text-secondary text-sm leading-relaxed mb-6">
+        <p className="text-secondary text-sm leading-relaxed mb-8">
           {description}
         </p>
-        
-        <div className="grid grid-cols-2 gap-y-3 mb-8">
-          {subFeatures.map((feature, i) => (
-            <div key={i} className="flex items-center text-[13px] text-primary">
-              <span className="text-accent mr-2">→</span>
-              {feature}
-            </div>
-          ))}
-        </div>
 
         <div className="mt-auto">
-          <span className="text-sm font-bold inline-flex items-center group/link">
+          <Link href={href} className="text-sm font-bold inline-flex items-center group/link hover:text-accent transition-colors">
             Learn More 
             <span className="ml-2 transform transition-transform duration-300 group-hover/link:translate-x-1">→</span>
-          </span>
+          </Link>
         </div>
       </div>
     </motion.div>

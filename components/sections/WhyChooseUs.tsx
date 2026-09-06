@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
       <div className="max-w-[1320px] mx-auto px-6 flex flex-col lg:flex-row gap-24 relative z-10">
         <div className="w-full lg:w-[45%]">
           <div className="relative group">
-            <div className="absolute -top-6 -left-6 w-full h-full border-[12px] border-[#C8A96E]/10 rounded-[4px] -z-10 transition-transform duration-700 group-hover:-translate-x-2 group-hover:-translate-y-2" />
+            <div className="absolute -top-6 -left-6 w-full h-full border-[12px] border-stone/20 rounded-[4px] -z-10 transition-transform duration-700 group-hover:-translate-x-2 group-hover:-translate-y-2" />
             
             <div className="relative aspect-[3/4] overflow-hidden rounded-[4px] shadow-2xl">
               <Image
@@ -49,16 +49,16 @@ export default function WhyChooseUs() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="absolute -bottom-10 -right-10 bg-primary p-8 text-white max-w-[260px] shadow-2xl rounded-[4px] border-b-4 border-[#C8A96E]"
+              className="absolute -bottom-10 -right-10 bg-primary p-8 text-white max-w-[260px] shadow-2xl rounded-[4px] border-b-4 border-stone"
             >
-              <h5 className="font-space font-bold text-xs uppercase tracking-[0.2em] mb-6 text-[#C8A96E]">Why Homeowners Choose Us</h5>
+              <h5 className="font-space font-bold text-xs uppercase tracking-[0.2em] mb-6 text-stone">Why Homeowners Choose Us</h5>
               <ul className="space-y-4">
                 {["Expert Craftsmanship", "Premium Materials", "Custom Designs"].map((item) => (
                   <li key={item} className="flex items-center space-x-3 text-[11px] font-bold uppercase tracking-wider group/li">
-                    <div className="w-5 h-5 rounded-[4px] bg-[#C8A96E] flex items-center justify-center text-primary transform transition-transform group-hover/li:rotate-12">
+                    <div className="w-5 h-5 rounded-[4px] bg-stone flex items-center justify-center text-primary transform transition-transform group-hover/li:rotate-12">
                       <Check size={10} strokeWidth={4} />
                     </div>
-                    <span className="opacity-80">{item}</span>
+                    <span className="opacity-90">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -86,14 +86,14 @@ export default function WhyChooseUs() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group flex items-start py-8 px-6 bg-bg-off/40 hover:bg-white border border-border-subtle/40 hover:border-accent transition-all duration-300 rounded-[4px] shadow-sm hover:shadow-xl hover:shadow-accent/5"
               >
-                <span className="font-space text-3xl font-black text-[#C8A96E] transition-colors duration-300 w-16 pt-1">
+                <span className="font-space text-3xl font-black text-stone transition-colors duration-300 w-16 pt-1">
                   {reason.id}
                 </span>
                 <div className="flex-grow px-4">
                   <h4 className="text-lg font-bold text-primary mb-2 group-hover:text-accent transition-colors duration-300">{reason.title}</h4>
                   <p className="text-[13px] text-secondary leading-relaxed font-medium">{reason.desc}</p>
                 </div>
-                <div className="w-10 h-10 rounded-[4px] bg-white border border-border-subtle/60 flex items-center justify-center text-secondary group-hover:bg-[#C8A96E] group-hover:border-[#C8A96E] group-hover:text-primary transition-all duration-300 shadow-sm">
+                <div className="w-10 h-10 rounded-[4px] bg-white border border-border-subtle/60 flex items-center justify-center text-secondary group-hover:bg-accent group-hover:border-accent group-hover:text-white transition-all duration-300 shadow-sm">
                   {icons[index]}
                 </div>
               </motion.div>
