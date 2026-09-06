@@ -3,8 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone, MapPin } from "lucide-react";
 import Button from "@/components/ui/Button";
+import { brand } from "@/data/content";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,38 +21,58 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 left-0 w-full z-50 bg-white border-b border-border-subtle py-4">
-        <div className="max-w-[1320px] mx-auto px-6 flex items-center justify-between">
-          <Link href="/" className="text-xl font-extrabold tracking-tight text-primary transition-colors duration-300">
-            Patio<span className="text-accent underline decoration-stone decoration-2 underline-offset-4">Living</span>
-          </Link>
-
-          <div className="hidden lg:flex items-center space-x-10">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-[13px] font-bold uppercase tracking-widest text-primary transition-colors duration-300 hover:text-accent"
-              >
-                {link.name}
-              </Link>
-            ))}
+      <header className="sticky top-0 left-0 w-full z-50">
+        {/* Top bar */}
+        <div className="bg-primary text-white">
+          <div className="max-w-[1320px] mx-auto px-6 py-2.5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1.5 sm:gap-4">
+            <a
+              href={`tel:${brand.phone.replace(/[^\d+]/g, "")}`}
+              className="inline-flex items-center gap-2 text-[12px] font-medium text-white/90 hover:text-stone transition-colors"
+            >
+              <Phone size={13} className="text-stone shrink-0" />
+              <span>{brand.phone}</span>
+            </a>
+            <div className="inline-flex items-center gap-2 text-[12px] font-medium text-white/80">
+              <MapPin size={13} className="text-stone shrink-0" />
+              <span className="truncate">{brand.address}</span>
+            </div>
           </div>
-
-          <div className="hidden lg:block">
-            <Button variant="accent" className="px-6 py-3" onClick={() => document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })}>
-              Get Free Estimates
-            </Button>
-          </div>
-
-          <button
-            className="lg:hidden text-primary transition-colors duration-300"
-            onClick={() => setIsMobileMenuOpen(true)}
-          >
-            <Menu size={24} />
-          </button>
         </div>
-      </nav>
+
+        {/* Main nav */}
+        <nav className="bg-white border-b border-border-subtle py-4">
+          <div className="max-w-[1320px] mx-auto px-6 flex items-center justify-between">
+            <Link href="/" className="text-xl font-extrabold tracking-tight text-primary transition-colors duration-300">
+              Patio<span className="text-accent underline decoration-stone decoration-2 underline-offset-4">Living</span>
+            </Link>
+
+            <div className="hidden lg:flex items-center space-x-10">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-[13px] font-bold uppercase tracking-widest text-primary transition-colors duration-300 hover:text-accent"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+
+            <div className="hidden lg:block">
+              <Button variant="accent" className="px-6 py-3" onClick={() => document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })}>
+                Get Free Estimates
+              </Button>
+            </div>
+
+            <button
+              className="lg:hidden text-primary transition-colors duration-300"
+              onClick={() => setIsMobileMenuOpen(true)}
+            >
+              <Menu size={24} />
+            </button>
+          </div>
+        </nav>
+      </header>
 
       <AnimatePresence>
         {isMobileMenuOpen && (
@@ -86,6 +107,17 @@ export default function Navbar() {
                   </Link>
                 </motion.div>
               ))}
+            </div>
+
+            <div className="mt-10 space-y-4 border-t border-white/15 pt-8">
+              <a href={`tel:${brand.phone.replace(/[^\d+]/g, "")}`} className="flex items-center gap-3 text-white/90">
+                <Phone size={16} className="text-stone" />
+                <span className="text-sm font-bold">{brand.phone}</span>
+              </a>
+              <div className="flex items-center gap-3 text-white/80">
+                <MapPin size={16} className="text-stone" />
+                <span className="text-sm">{brand.address}</span>
+              </div>
             </div>
 
             <div className="mt-auto">

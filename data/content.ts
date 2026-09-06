@@ -3,8 +3,9 @@ export const brand = {
   shortName: "Patio",
   accentName: "Living",
   tagline: "Outdoor Living, Hardscaping & Landscaping Services Charlotte",
-  phone: "+1 (704) 555-0148",
+  phone: "000-000-0000",
   email: "hello@patioliving.com",
+  address: "123 Main Street, Charlotte, NC 28202",
   radius: "60-mile radius from Charlotte",
 };
 
