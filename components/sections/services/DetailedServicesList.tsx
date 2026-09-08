@@ -33,15 +33,17 @@ export default function DetailedServicesList() {
                 transition={{ duration: 0.6 }}
                 className={`flex flex-col ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} gap-10 lg:gap-16 items-center`}
               >
-                <div className="w-full lg:w-1/2 relative aspect-[4/3] overflow-hidden rounded-[4px] group">
+                <div className="w-full lg:w-1/2 relative overflow-hidden rounded-[4px] group bg-bg-off">
                   <Image
                     src={service.imageSrc}
                     alt={service.name}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    width={1200}
+                    height={900}
+                    priority={index < 2}
+                    className="w-full h-auto aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                  <div className="absolute top-6 left-6 bg-primary text-stone px-4 py-2 rounded-[4px]">
+                  <div className="absolute top-6 left-6 z-10 bg-primary text-stone px-4 py-2 rounded-[4px]">
                     <span className="text-xs font-bold uppercase tracking-widest">
                       {service.number}
                     </span>

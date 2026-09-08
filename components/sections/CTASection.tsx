@@ -48,7 +48,7 @@ export default function CTASection({
             {title ?? (
               <>
                 Make Your Outdoor Space{" "}
-                <span className="text-accent">Something to Enjoy</span>
+                <span className="text-stone whitespace-nowrap">Something to Enjoy</span>
               </>
             )}
           </h2>

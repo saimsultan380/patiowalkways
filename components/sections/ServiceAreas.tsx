@@ -14,7 +14,7 @@ export default function ServiceAreas() {
             <SectionLabel className="text-white">AREAS</SectionLabel>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-space font-bold leading-tight mb-8">
               Serving Charlotte &{" "}
-              <span className="text-accent">Surrounding Communities</span>
+              <span className="text-stone">Surrounding Communities</span>
             </h2>
             <p className="text-white/70 text-lg leading-relaxed max-w-xl mb-12">
               Serving a {brand.radius} to make travel and material logistics easier. If you are nearby but outside these communities, contact us with your project location.

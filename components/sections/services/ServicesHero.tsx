@@ -44,7 +44,7 @@ export default function ServicesHero() {
             className="text-4xl md:text-5xl lg:text-[64px] font-space font-bold leading-[1.05] mb-6 text-white tracking-tight"
           >
             Complete Hardscaping & Landscaping{" "}
-            <span className="text-accent">{servicesPageHero.titleAccent}</span>
+            <span className="text-stone">{servicesPageHero.titleAccent}</span>
           </motion.h1>
 
           <motion.p
