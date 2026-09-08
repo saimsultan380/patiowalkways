@@ -5,13 +5,12 @@
   --color-primary: #1A2F26;
   --color-secondary: #4A5C52;
   --color-muted: #8A9A90;
-  /* Soft garden mist background */
-  --color-bg-off: #F1F5F1;
-  /* Living green — landscaping / growth */
+  --color-bg-off: #ffffff;
+  /* Heading highlight / secondary heading color */
   --color-accent: #3D7A5A;
-  /* Warm sandstone — pavers / stone */
-  --color-stone: #C4A574;
-  --color-border-subtle: #DCE5DE;
+  /* Brand gold replacement */
+  --color-stone: #FFAD2C;
+  --color-border-subtle: #E5E5E5;
   
   --font-inter: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-playfair: var(--font-playfair), ui-serif, Georgia, serif;

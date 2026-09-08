@@ -23,7 +23,7 @@ const icons = [
 
 export default function ServicesWhyChoose() {
   return (
-    <section id="why-us" className="py-32 bg-bg-off/50">
+    <section id="why-us" className="py-32 bg-white">
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="mb-20 max-w-3xl">
           <SectionLabel>WHY CHOOSE US</SectionLabel>
@@ -44,10 +44,10 @@ export default function ServicesWhyChoose() {
               className="group bg-white p-8 border border-border-subtle/40 hover:border-accent rounded-[4px] shadow-sm hover:shadow-xl hover:shadow-accent/5 transition-all duration-300"
             >
               <div className="flex items-center justify-between mb-8">
-                <span className="font-space text-3xl font-black text-stone">
+                <span className="font-space text-3xl font-black text-accent">
                   {item.id}
                 </span>
-                <div className="w-11 h-11 rounded-[4px] bg-bg-off flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                <div className="w-11 h-11 rounded-[4px] bg-white border border-border-subtle flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   {icons[index]}
                 </div>
               </div>

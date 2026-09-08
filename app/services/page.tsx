@@ -74,7 +74,7 @@ export default function ServicesPage() {
         title={
           <>
             {servicesCta.title}{" "}
-            <span className="text-stone">{servicesCta.titleAccent}</span>
+            <span className="text-accent">{servicesCta.titleAccent}</span>
           </>
         }
         description={servicesCta.description}

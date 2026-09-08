@@ -5,7 +5,7 @@ import { stats } from "@/data/content";
 
 export default function StatsMarquee() {
   return (
-    <section className="bg-primary py-8 overflow-hidden border-y border-white/5 select-none">
+    <section className="bg-white py-8 overflow-hidden border-y border-border-subtle select-none">
       <div className="flex whitespace-nowrap">
         <motion.div
           initial={{ x: 0 }}
@@ -23,11 +23,10 @@ export default function StatsMarquee() {
                 <span className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-stone italic">
                   {stat.value}
                 </span>
-                <span className="text-[11px] md:text-xs font-bold uppercase tracking-[0.2em] text-white/70 whitespace-nowrap">
+                <span className="text-[11px] md:text-xs font-bold uppercase tracking-[0.2em] text-primary whitespace-nowrap">
                   {stat.label}
                 </span>
               </div>
-              {/* Vertical Separator */}
               <div className="w-[1px] h-10 bg-stone/40" />
             </div>
           ))}

@@ -20,7 +20,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[calc(100vh-80px)] flex flex-col lg:flex-row overflow-hidden bg-white">
-      <div className="absolute top-0 left-0 w-1/2 h-full bg-bg-off/30 -skew-x-12 -translate-x-1/4 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-1/2 h-full bg-white -skew-x-12 -translate-x-1/4 pointer-events-none" />
 
       <div className="w-full lg:w-[55%] flex items-center justify-center px-6 py-24 lg:pt-40 lg:pb-24 relative z-10">
         <div className="max-w-[720px] w-full">

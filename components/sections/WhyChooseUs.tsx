@@ -84,9 +84,9 @@ export default function WhyChooseUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group flex items-start py-8 px-6 bg-bg-off/40 hover:bg-white border border-border-subtle/40 hover:border-accent transition-all duration-300 rounded-[4px] shadow-sm hover:shadow-xl hover:shadow-accent/5"
+                className="group flex items-start py-8 px-6 bg-white hover:bg-white border border-border-subtle/40 hover:border-accent transition-all duration-300 rounded-[4px] shadow-sm hover:shadow-xl hover:shadow-accent/5"
               >
-                <span className="font-space text-3xl font-black text-stone transition-colors duration-300 w-16 pt-1">
+                <span className="font-space text-3xl font-black text-accent transition-colors duration-300 w-16 pt-1">
                   {reason.id}
                 </span>
                 <div className="flex-grow px-4">

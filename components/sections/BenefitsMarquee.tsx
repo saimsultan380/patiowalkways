@@ -15,7 +15,7 @@ const icons = [
 
 export default function BenefitsMarquee() {
   return (
-    <section className="bg-primary py-8 overflow-hidden border-y border-white/5 select-none">
+    <section className="bg-white py-8 overflow-hidden border-y border-border-subtle select-none">
       <div className="flex">
         <motion.div
           initial={{ x: 0 }}
@@ -33,11 +33,11 @@ export default function BenefitsMarquee() {
                 <span className="text-stone">
                   {icons[i % benefits.length]}
                 </span>
-                <span className="text-[11px] md:text-xs font-bold uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                <span className="text-[11px] md:text-xs font-bold uppercase tracking-[0.2em] text-primary whitespace-nowrap">
                   {benefit.label}
                 </span>
               </div>
-              <div className="w-[1px] h-4 bg-white/10" />
+              <div className="w-[1px] h-4 bg-border-subtle" />
             </div>
           ))}
         </motion.div>

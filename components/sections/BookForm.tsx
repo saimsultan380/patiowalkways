@@ -11,7 +11,7 @@ export default function BookForm() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section id="book" className="py-32 bg-bg-off/50">
+    <section id="book" className="py-32 bg-white">
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           <div>
