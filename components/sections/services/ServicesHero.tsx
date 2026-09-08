@@ -12,7 +12,7 @@ export default function ServicesHero() {
   const quickLinks = detailedServices.slice(0, 6);
 
   return (
-    <section className="relative min-h-[62vh] md:min-h-[72vh] flex flex-col justify-end overflow-hidden">
+    <section className="relative md:min-h-[72vh] flex flex-col justify-end overflow-hidden">
       {/* Full-bleed background */}
       <div className="absolute inset-0">
         <Image
@@ -27,7 +27,7 @@ export default function ServicesHero() {
         <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30" />
       </div>
 
-      <div className="relative z-10 w-full max-w-[1320px] mx-auto px-6 pt-8 pb-8 md:pt-14 md:pb-10 lg:pt-20 lg:pb-14">
+      <div className="relative z-10 w-full max-w-[1320px] mx-auto px-6 pt-16 pb-8 md:pt-14 md:pb-10 lg:pt-20 lg:pb-14">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -41,7 +41,7 @@ export default function ServicesHero() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-[64px] font-space font-bold leading-[1.05] mb-6 text-white tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-[64px] font-space font-bold leading-[1.05] mb-5 sm:mb-6 text-white tracking-tight"
           >
             Complete Hardscaping & Landscaping{" "}
             <span className="text-stone">{servicesPageHero.titleAccent}</span>
@@ -51,7 +51,7 @@ export default function ServicesHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base md:text-lg text-white/75 mb-10 max-w-2xl leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-white/75 mb-8 sm:mb-10 max-w-2xl leading-relaxed"
           >
             {servicesPageHero.description}
           </motion.p>
@@ -60,21 +60,21 @@ export default function ServicesHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap items-center gap-4"
+            className="flex flex-row flex-nowrap items-center gap-2 sm:gap-4"
           >
             <Button
               variant="stone"
-              className="px-8 sm:px-10 py-4 sm:py-5 text-sm sm:text-base"
+              className="px-3.5 py-2.5 sm:px-10 sm:py-5 text-[11px] sm:text-base whitespace-nowrap shrink"
               onClick={() => document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })}
             >
               Get Free Estimates
             </Button>
-            <a href={`tel:${brand.phone.replace(/[^\d+]/g, "")}`}>
+            <a href={`tel:${brand.phone.replace(/[^\d+]/g, "")}`} className="shrink-0">
               <Button
                 variant="outline"
-                className="px-8 sm:px-10 py-4 sm:py-5 text-sm sm:text-base border-white/50 text-white hover:bg-white hover:text-primary flex items-center space-x-3"
+                className="px-3.5 py-2.5 sm:px-10 sm:py-5 text-[11px] sm:text-base border-white/50 text-white hover:bg-white hover:text-primary inline-flex items-center justify-center gap-1.5 whitespace-nowrap"
               >
-                <Phone size={18} />
+                <Phone size={14} className="shrink-0" />
                 <span>Call Us</span>
               </Button>
             </a>

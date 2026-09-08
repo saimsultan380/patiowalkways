@@ -97,27 +97,27 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "tween", duration: 0.4 }}
-            className="fixed inset-0 z-[60] bg-primary flex flex-col p-10"
+            className="fixed inset-0 z-[60] bg-primary flex flex-col px-6 pt-5 pb-[max(1rem,env(safe-area-inset-bottom))] sm:p-10"
           >
-            <div className="flex justify-between items-center mb-16">
+            <div className="flex justify-between items-center mb-8 sm:mb-16">
               <div className="flex items-center gap-3">
-                <span className="relative w-12 h-12 rounded-full overflow-hidden border border-white/20 shrink-0 bg-black">
+                <span className="relative w-11 h-11 rounded-full overflow-hidden border border-white/20 shrink-0 bg-black">
                   <Image
                     src={brand.logo}
                     alt={brand.name}
                     fill
                     className="object-cover"
-                    sizes="48px"
+                    sizes="44px"
                   />
                 </span>
-                <span className="text-xl font-extrabold text-white">{brand.shortName}</span>
+                <span className="text-lg font-extrabold text-white">{brand.shortName}</span>
               </div>
-              <button onClick={() => setIsMobileMenuOpen(false)} className="text-white">
-                <X size={32} />
+              <button onClick={() => setIsMobileMenuOpen(false)} className="text-white p-1">
+                <X size={28} />
               </button>
             </div>
 
-            <div className="flex flex-col space-y-8">
+            <div className="flex flex-col space-y-5 sm:space-y-8 overflow-y-auto">
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.name}
@@ -128,7 +128,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-4xl font-playfair italic text-white hover:text-stone transition-colors"
+                    className="text-3xl sm:text-4xl font-playfair italic text-white hover:text-stone transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -136,20 +136,19 @@ export default function Navbar() {
               ))}
             </div>
 
-            <div className="mt-10 space-y-4 border-t border-white/15 pt-8">
-              <a href={`tel:${brand.phone.replace(/[^\d+]/g, "")}`} className="flex items-center gap-3 text-white/90">
-                <Phone size={16} className="text-stone" />
-                <span className="text-sm font-bold">{brand.phone}</span>
-              </a>
-              <div className="flex items-center gap-3 text-white/80">
-                <MapPin size={16} className="text-stone" />
-                <span className="text-sm">{brand.address}</span>
+            <div className="mt-auto pt-5 pb-[max(0.5rem,env(safe-area-inset-bottom))] space-y-4 border-t border-white/15">
+              <div className="space-y-2.5">
+                <a href={`tel:${brand.phone.replace(/[^\d+]/g, "")}`} className="flex items-center gap-3 text-white/90">
+                  <Phone size={15} className="text-stone shrink-0" />
+                  <span className="text-sm font-bold">{brand.phone}</span>
+                </a>
+                <div className="flex items-start gap-3 text-white/80">
+                  <MapPin size={15} className="text-stone shrink-0 mt-0.5" />
+                  <span className="text-sm leading-snug">{brand.address}</span>
+                </div>
               </div>
-            </div>
-
-            <div className="mt-auto">
               <Button
-                className="w-full py-6 text-lg bg-white text-primary"
+                className="w-full px-4 py-2.5 text-xs tracking-wide bg-white text-primary hover:bg-stone"
                 onClick={() => {
                   setIsMobileMenuOpen(false);
                   document.getElementById("book")?.scrollIntoView({ behavior: "smooth" });

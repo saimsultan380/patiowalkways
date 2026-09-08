@@ -11,7 +11,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export default function Button({ variant = "primary", children, className, ...props }: ButtonProps) {
-  const baseStyles = "inline-flex items-center justify-center px-8 py-4 text-sm font-bold transition-all duration-300 focus:outline-none rounded-[4px]";
+  const baseStyles = "inline-flex items-center justify-center px-6 py-3 text-sm font-bold transition-all duration-300 focus:outline-none rounded-[4px]";
   
   const variants = {
     primary: "bg-primary text-white hover:bg-primary/90",

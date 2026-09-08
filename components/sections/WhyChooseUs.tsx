@@ -25,34 +25,34 @@ const icons = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-us" className="py-32 bg-white relative overflow-hidden">
-      <div className="absolute top-0 right-0 text-[300px] font-black text-bg-off/40 select-none pointer-events-none -translate-y-1/4 translate-x-1/4 uppercase">
+    <section id="why-us" className="py-20 sm:py-28 lg:py-32 bg-white relative overflow-hidden">
+      <div className="absolute top-0 right-0 text-[180px] sm:text-[300px] font-black text-bg-off/40 select-none pointer-events-none -translate-y-1/4 translate-x-1/4 uppercase">
         Out
       </div>
 
-      <div className="max-w-[1320px] mx-auto px-6 flex flex-col lg:flex-row gap-24 relative z-10">
-        <div className="w-full lg:w-[45%]">
+      <div className="max-w-[1320px] mx-auto px-6 flex flex-col lg:flex-row gap-12 lg:gap-24 relative z-10">
+        <div className="w-full lg:w-[45%] mb-8 lg:mb-0">
           <div className="relative group">
-            <div className="absolute -top-6 -left-6 w-full h-full border-[12px] border-stone/20 rounded-[4px] -z-10 transition-transform duration-700 group-hover:-translate-x-2 group-hover:-translate-y-2" />
-            
-            <div className="relative aspect-[3/4] overflow-hidden rounded-[4px] shadow-2xl">
+            <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-full h-full border-[8px] sm:border-[12px] border-stone/20 rounded-[4px] -z-10 transition-transform duration-700 group-hover:-translate-x-2 group-hover:-translate-y-2" />
+
+            <div className="relative aspect-[4/5] sm:aspect-[3/4] overflow-hidden rounded-[4px] shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop"
-                alt="Expert outdoor craftsmanship"
+                src="/05_outdoor_living_features.jpg"
+                alt="Custom patio, fire pit, and outdoor living craftsmanship"
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />
             </div>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="absolute -bottom-10 -right-10 bg-primary p-8 text-white max-w-[260px] shadow-2xl rounded-[4px] border-b-4 border-stone"
+              className="relative sm:absolute mt-4 sm:mt-0 sm:-bottom-10 sm:-right-10 bg-primary p-6 sm:p-8 text-white w-full sm:max-w-[260px] shadow-2xl rounded-[4px] border-b-4 border-stone"
             >
-              <h5 className="font-space font-bold text-xs uppercase tracking-[0.2em] mb-6 text-stone">Why Homeowners Choose Us</h5>
-              <ul className="space-y-4">
+              <h5 className="font-space font-bold text-xs uppercase tracking-[0.2em] mb-5 sm:mb-6 text-stone">Why Homeowners Choose Us</h5>
+              <ul className="space-y-3 sm:space-y-4">
                 {["Expert Craftsmanship", "Premium Materials", "Custom Designs"].map((item) => (
                   <li key={item} className="flex items-center space-x-3 text-[11px] font-bold uppercase tracking-wider group/li">
                     <div className="w-5 h-5 rounded-[4px] bg-stone flex items-center justify-center text-primary transform transition-transform group-hover/li:rotate-12">
@@ -68,11 +68,11 @@ export default function WhyChooseUs() {
 
         <div className="w-full lg:w-[55%] flex flex-col justify-center lg:pl-12">
           <SectionLabel>WHY CHOOSE US</SectionLabel>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-space font-bold mb-10 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-space font-bold mb-6 sm:mb-10 leading-tight">
             Outdoor Spaces Built with{" "}
             <span className="text-accent underline decoration-1 underline-offset-8">Care & Skill</span>
           </h2>
-          <p className="text-secondary mb-16 max-w-xl leading-relaxed text-lg">
+          <p className="text-secondary mb-10 sm:mb-16 max-w-xl leading-relaxed text-base sm:text-lg">
             From patios and pavers to walls and outdoor living features, we focus on quality workmanship, premium materials, and designs tailored to your property.
           </p>
           

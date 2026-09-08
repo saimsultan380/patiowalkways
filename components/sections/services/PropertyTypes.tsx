@@ -28,7 +28,7 @@ export default function PropertyTypes() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-[4px] min-h-[420px]"
+              className="group relative overflow-hidden rounded-[4px] min-h-[320px] sm:min-h-[380px] md:min-h-[420px]"
             >
               <Image
                 src={type.image}
@@ -38,14 +38,14 @@ export default function PropertyTypes() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-primary/70 group-hover:bg-primary/80 transition-colors duration-300" />
-              <div className="absolute inset-0 p-10 flex flex-col justify-end">
-                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-stone mb-4">
+              <div className="absolute inset-0 p-6 sm:p-8 md:p-10 flex flex-col justify-end">
+                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-stone mb-3 sm:mb-4">
                   {index === 0 ? "Homes" : "Businesses"}
                 </span>
-                <h3 className="text-3xl md:text-4xl font-space font-bold text-white mb-4">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-space font-bold text-white mb-3 sm:mb-4">
                   {type.title}
                 </h3>
-                <p className="text-white/75 text-base leading-relaxed max-w-md">
+                <p className="text-white/75 text-sm sm:text-base leading-relaxed max-w-md">
                   {type.description}
                 </p>
               </div>
