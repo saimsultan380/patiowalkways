@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, MapPin } from "lucide-react";
@@ -21,29 +22,45 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 left-0 w-full z-50">
-        {/* Top bar */}
+      <header className="relative z-50">
         <div className="bg-primary text-white">
-          <div className="max-w-[1320px] mx-auto px-6 py-2.5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1.5 sm:gap-4">
+          <div className="max-w-[1320px] mx-auto px-6 py-2.5 flex flex-row items-center justify-between gap-3">
             <a
               href={`tel:${brand.phone.replace(/[^\d+]/g, "")}`}
-              className="inline-flex items-center gap-2 text-[12px] font-medium text-white/90 hover:text-stone transition-colors"
+              className="inline-flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-[12px] font-medium text-white/90 hover:text-stone transition-colors shrink-0"
             >
               <Phone size={13} className="text-stone shrink-0" />
               <span>{brand.phone}</span>
             </a>
-            <div className="inline-flex items-center gap-2 text-[12px] font-medium text-white/80">
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-[12px] font-medium text-white/80 min-w-0">
               <MapPin size={13} className="text-stone shrink-0" />
               <span className="truncate">{brand.address}</span>
             </div>
           </div>
         </div>
+      </header>
 
-        {/* Main nav */}
-        <nav className="bg-white border-b border-border-subtle py-4">
+      <nav className="sticky top-0 z-50 bg-white border-b border-border-subtle py-3">
           <div className="max-w-[1320px] mx-auto px-6 flex items-center justify-between">
-            <Link href="/" className="text-xl font-extrabold tracking-tight text-primary transition-colors duration-300">
-              Patio<span className="text-accent underline decoration-stone decoration-2 underline-offset-4">Living</span>
+            <Link href="/" className="flex items-center gap-3 group">
+              <span className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border border-border-subtle shadow-sm shrink-0 bg-primary">
+                <Image
+                  src={brand.logo}
+                  alt={brand.name}
+                  fill
+                  className="object-cover"
+                  sizes="56px"
+                  priority
+                />
+              </span>
+              <span className="hidden sm:flex flex-col leading-tight">
+                <span className="text-base font-extrabold tracking-tight text-primary group-hover:text-accent transition-colors">
+                  {brand.shortName}
+                </span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-secondary">
+                  Hardscaping
+                </span>
+              </span>
             </Link>
 
             <div className="hidden lg:flex items-center space-x-10">
@@ -72,7 +89,6 @@ export default function Navbar() {
             </button>
           </div>
         </nav>
-      </header>
 
       <AnimatePresence>
         {isMobileMenuOpen && (
@@ -84,7 +100,18 @@ export default function Navbar() {
             className="fixed inset-0 z-[60] bg-primary flex flex-col p-10"
           >
             <div className="flex justify-between items-center mb-16">
-              <span className="text-xl font-extrabold text-white">PatioLiving</span>
+              <div className="flex items-center gap-3">
+                <span className="relative w-12 h-12 rounded-full overflow-hidden border border-white/20 shrink-0 bg-black">
+                  <Image
+                    src={brand.logo}
+                    alt={brand.name}
+                    fill
+                    className="object-cover"
+                    sizes="48px"
+                  />
+                </span>
+                <span className="text-xl font-extrabold text-white">{brand.shortName}</span>
+              </div>
               <button onClick={() => setIsMobileMenuOpen(false)} className="text-white">
                 <X size={32} />
               </button>

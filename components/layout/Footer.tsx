@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import LinkNext from "next/link";
 import { Globe, Phone, Mail } from "lucide-react";
 import { brand, services, areas } from "@/data/content";
@@ -43,8 +44,24 @@ export default function Footer() {
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-12 mb-20">
           <div className="lg:col-span-1">
-            <LinkNext href="/" className="text-3xl font-space font-extrabold tracking-tight mb-8 block">
-              Patio<span className="text-accent underline decoration-stone decoration-2 underline-offset-8">Living</span>
+            <LinkNext href="/" className="flex items-center gap-3 mb-8 group">
+              <span className="relative w-16 h-16 rounded-full overflow-hidden border border-border-subtle shadow-sm shrink-0 bg-primary">
+                <Image
+                  src={brand.logo}
+                  alt={brand.name}
+                  fill
+                  className="object-cover"
+                  sizes="64px"
+                />
+              </span>
+              <span className="flex flex-col leading-tight">
+                <span className="text-xl font-space font-extrabold tracking-tight text-primary group-hover:text-accent transition-colors">
+                  {brand.shortName}
+                </span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-secondary">
+                  Hardscaping LLC
+                </span>
+              </span>
             </LinkNext>
             <p className="text-secondary text-sm leading-relaxed mb-10 max-w-xs font-medium">
               Transform your Charlotte property with expert patio, paver, walkway, driveway, and outdoor living services built to last.
@@ -132,7 +149,7 @@ export default function Footer() {
 
         <div className="pt-12 border-t border-border-subtle flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-secondary/60 text-[11px] font-bold uppercase tracking-widest">
-            © {currentYear} PatioLiving. Outdoor living built for Charlotte.
+            © {currentYear} {brand.name}. Outdoor living built for Charlotte.
           </p>
           
           <div className="flex flex-wrap justify-center gap-6 lg:gap-12">

@@ -1,12 +1,13 @@
 export const brand = {
-  name: "PatioLiving",
-  shortName: "Patio",
-  accentName: "Living",
+  name: "Empresa Galdamez Hardscaping LLC",
+  shortName: "Galdamez",
+  accentName: "Hardscaping",
   tagline: "Outdoor Living, Hardscaping & Landscaping Services Charlotte",
   phone: "000-000-0000",
   email: "hello@patioliving.com",
   address: "123 Main Street, Charlotte, NC 28202",
   radius: "60-mile radius from Charlotte",
+  logo: "/logo.jpg",
 };
 
 export const services = [

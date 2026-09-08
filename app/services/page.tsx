@@ -22,7 +22,7 @@ import {
 } from "@/data/services-page";
 
 export const metadata: Metadata = {
-  title: "Hardscaping & Landscaping Services Charlotte | PatioLiving",
+  title: "Hardscaping & Landscaping Services Charlotte | Empresa Galdamez",
   description:
     "Complete hardscaping and landscaping services in Charlotte — patios, pavers, driveways, outdoor living, lighting, drainage, fencing, and commercial outdoor solutions.",
 };
