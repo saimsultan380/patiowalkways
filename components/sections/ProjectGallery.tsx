@@ -7,7 +7,7 @@ import { projects } from "@/data/content";
 
 export default function ProjectGallery() {
   return (
-    <section id="projects" className="py-32 bg-white">
+    <section id="projects" className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="max-w-[1320px] mx-auto px-6 mb-20">
         <SectionLabel>RECENT WORK</SectionLabel>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-space font-bold tracking-tight">

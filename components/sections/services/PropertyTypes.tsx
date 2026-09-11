@@ -7,7 +7,7 @@ import { propertyTypes } from "@/data/services-page";
 
 export default function PropertyTypes() {
   return (
-    <section className="py-32 bg-white">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="mb-20 max-w-3xl">
           <SectionLabel>WHO WE SERVE</SectionLabel>

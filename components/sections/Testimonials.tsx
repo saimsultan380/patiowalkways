@@ -24,7 +24,7 @@ export default function Testimonials({
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    <section id="reviews" className="py-32 bg-white overflow-hidden">
+    <section id="reviews" className="py-12 sm:py-16 lg:py-20 bg-white overflow-hidden">
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div>

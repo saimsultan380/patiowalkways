@@ -42,7 +42,7 @@ export default function HowItWorks({
   const icons = items.length === 5 && items[4]?.title === "Final Walkthrough" ? servicesIcons : defaultIcons;
 
   return (
-    <section id="how-it-works" className="py-32 bg-white">
+    <section id="how-it-works" className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="flex flex-col lg:flex-row justify-between lg:items-end items-start mb-16 lg:mb-24 gap-6 lg:gap-8">
           <div className="max-w-2xl text-left">

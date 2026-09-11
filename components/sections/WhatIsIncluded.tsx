@@ -15,7 +15,7 @@ const icons = [
 
 export default function WhatIsIncluded() {
   return (
-    <section id="patios" className="py-32 bg-white">
+    <section id="patios" className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="mb-20">
           <SectionLabel>ABOUT OUR PATIOS</SectionLabel>

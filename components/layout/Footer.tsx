@@ -3,7 +3,8 @@
 import Image from "next/image";
 import LinkNext from "next/link";
 import { Globe, Phone, Mail } from "lucide-react";
-import { brand, services, areas } from "@/data/content";
+import { brand, areas } from "@/data/content";
+import { detailedServices } from "@/data/services-page";
 
 const SocialIcon = ({ name }: { name: string }) => {
   const icons: Record<string, React.ReactNode> = {
@@ -35,7 +36,23 @@ const SocialIcon = ({ name }: { name: string }) => {
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const footerServices = services.slice(0, 6).map((s) => s.name.replace(" Charlotte, NC", ""));
+  const footerServices = detailedServices.map((s) => {
+    const dedicated: Record<string, string> = {
+      "patios-walkways": "/services/patios-walkways",
+      driveways: "/services/driveways",
+      walls: "/services/walls",
+      pavers: "/services/pavers",
+      "outdoor-living": "/services/outdoor-living",
+      lighting: "/services/lighting",
+      landscaping: "/services/landscaping",
+      "fences-water": "/services/fences-water",
+      commercial: "/services/commercial",
+    };
+    return {
+      name: s.name,
+      href: dedicated[s.id] ?? `/services#${s.id}`,
+    };
+  });
 
   return (
     <footer className="bg-white text-primary pt-32 pb-12 overflow-hidden relative border-t border-border-subtle">
@@ -88,9 +105,9 @@ export default function Footer() {
             <h4 className="font-space text-base font-bold uppercase tracking-[0.2em] mb-10 text-accent">Services</h4>
             <ul className="space-y-4">
               {footerServices.map((item) => (
-                <li key={item}>
-                  <LinkNext href="/services" className="text-secondary font-medium text-sm hover:text-accent hover:translate-x-1 inline-block transition-all duration-300">
-                    {item}
+                <li key={item.name}>
+                  <LinkNext href={item.href} className="text-secondary font-medium text-sm hover:text-accent hover:translate-x-1 inline-block transition-all duration-300">
+                    {item.name}
                   </LinkNext>
                 </li>
               ))}
@@ -102,6 +119,7 @@ export default function Footer() {
             <ul className="space-y-4">
               {[
                 { name: "All Services", href: "/services" },
+                { name: "Contact", href: "/contact" },
                 { name: "How We Work", href: "/#how-it-works" },
                 { name: "Types of Patios", href: "/#patios" },
                 { name: "Why Choose Us", href: "/#why-us" },
@@ -131,18 +149,24 @@ export default function Footer() {
             </ul>
             
             <div className="space-y-4 pt-4">
-              <div className="flex items-center space-x-3 text-primary/80 group cursor-pointer">
+              <a
+                href={`tel:${brand.phone.replace(/[^\d+]/g, "")}`}
+                className="flex items-center space-x-3 text-primary/80 group"
+              >
                 <div className="w-8 h-8 rounded-[4px] bg-bg-off border border-border-subtle flex items-center justify-center group-hover:bg-stone transition-all duration-300">
                   <Phone size={14} className="group-hover:text-primary" />
                 </div>
                 <span className="text-sm font-bold group-hover:text-accent transition-colors">{brand.phone}</span>
-              </div>
-              <div className="flex items-center space-x-3 text-primary/80 group cursor-pointer">
+              </a>
+              <a
+                href={`mailto:${brand.email}`}
+                className="flex items-center space-x-3 text-primary/80 group"
+              >
                 <div className="w-8 h-8 rounded-[4px] bg-bg-off border border-border-subtle flex items-center justify-center group-hover:bg-stone transition-all duration-300">
                   <Mail size={14} className="group-hover:text-primary" />
                 </div>
                 <span className="text-sm font-bold group-hover:text-accent transition-colors">{brand.email}</span>
-              </div>
+              </a>
             </div>
           </div>
         </div>

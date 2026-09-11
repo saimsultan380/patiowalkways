@@ -25,7 +25,7 @@ const icons = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-us" className="py-20 sm:py-28 lg:py-32 bg-white relative overflow-hidden">
+    <section id="why-us" className="py-12 sm:py-16 lg:py-20 bg-white relative overflow-hidden">
       <div className="absolute top-0 right-0 text-[180px] sm:text-[300px] font-black text-bg-off/40 select-none pointer-events-none -translate-y-1/4 translate-x-1/4 uppercase">
         Out
       </div>

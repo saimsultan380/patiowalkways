@@ -7,7 +7,7 @@ import { detailedServices } from "@/data/services-page";
 
 export default function DetailedServicesList() {
   return (
-    <section id="service-list" className="py-32 bg-white">
+    <section id="service-list" className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="mb-20 max-w-3xl">
           <SectionLabel>OUR HARDSCAPING & LANDSCAPING SERVICES</SectionLabel>
@@ -73,15 +73,40 @@ export default function DetailedServicesList() {
                     ))}
                   </div>
 
-                  <button
-                    onClick={() =>
-                      document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })
-                    }
-                    className="mt-10 text-sm font-bold uppercase tracking-widest border-b border-primary pb-1 hover:text-accent hover:border-accent transition-all inline-flex items-center"
-                  >
-                    Get a Free Estimate
-                    <span className="ml-2">→</span>
-                  </button>
+                  <div className="mt-10 flex flex-wrap items-center gap-4">
+                    {(["patios-walkways", "driveways", "walls", "pavers", "outdoor-living", "lighting", "landscaping", "fences-water", "commercial"] as const).includes(
+                      service.id as "patios-walkways"
+                    ) && (
+                      <a
+                        href={
+                          ({
+                            "patios-walkways": "/services/patios-walkways",
+                            driveways: "/services/driveways",
+                            walls: "/services/walls",
+                            pavers: "/services/pavers",
+                            "outdoor-living": "/services/outdoor-living",
+                            lighting: "/services/lighting",
+                            landscaping: "/services/landscaping",
+                            "fences-water": "/services/fences-water",
+                            commercial: "/services/commercial",
+                          } as Record<string, string>)[service.id]
+                        }
+                        className="text-sm font-bold uppercase tracking-widest border-b border-accent text-accent pb-1 hover:text-primary hover:border-primary transition-all inline-flex items-center"
+                      >
+                        View Full Service Page
+                        <span className="ml-2">→</span>
+                      </a>
+                    )}
+                    <button
+                      onClick={() =>
+                        document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })
+                      }
+                      className="text-sm font-bold uppercase tracking-widest border-b border-primary pb-1 hover:text-accent hover:border-accent transition-all inline-flex items-center"
+                    >
+                      Get a Free Estimate
+                      <span className="ml-2">→</span>
+                    </button>
+                  </div>
                 </div>
               </motion.div>
             );

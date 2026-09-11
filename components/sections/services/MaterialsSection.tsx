@@ -6,7 +6,7 @@ import { materials } from "@/data/services-page";
 
 export default function MaterialsSection() {
   return (
-    <section className="py-32 bg-white overflow-hidden relative">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white overflow-hidden relative">
       <div className="max-w-[1320px] mx-auto px-6 relative z-10">
         <div className="max-w-3xl mb-16">
           <SectionLabel>QUALITY MATERIALS</SectionLabel>

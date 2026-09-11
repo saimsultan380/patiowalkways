@@ -22,7 +22,7 @@ export default function FAQ({
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-32 bg-white">
+    <section id="faq" className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="max-w-[1320px] mx-auto px-6 flex flex-col lg:flex-row gap-20">
         <div className="w-full lg:w-[40%]">
           <SectionLabel>{label}</SectionLabel>

@@ -7,7 +7,7 @@ import { services } from "@/data/content";
 
 export default function ServicesGrid() {
   return (
-    <section id="services" className="py-32 bg-white">
+    <section id="services" className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="mb-20 text-center lg:text-left">
           <SectionLabel>OUR OUTDOOR SERVICES</SectionLabel>
@@ -33,7 +33,19 @@ export default function ServicesGrid() {
               name={service.name}
               description={service.description}
               imageSrc={service.imageSrc}
-              href={`/services#${service.id}`}
+              href={
+                ({
+                  "patios-walkways": "/services/patios-walkways",
+                  driveways: "/services/driveways",
+                  walls: "/services/walls",
+                  pavers: "/services/pavers",
+                  "outdoor-living": "/services/outdoor-living",
+                  lighting: "/services/lighting",
+                  landscaping: "/services/landscaping",
+                  "fences-water": "/services/fences-water",
+                  commercial: "/services/commercial",
+                } as Record<string, string>)[service.id] ?? `/services#${service.id}`
+              }
             />
           ))}
         </div>

@@ -7,7 +7,7 @@ import { areas, brand } from "@/data/content";
 
 export default function ServiceAreas() {
   return (
-    <section id="areas" className="py-20 sm:py-28 lg:py-32 bg-primary text-white overflow-hidden">
+    <section id="areas" className="py-12 sm:py-16 lg:py-20 bg-primary text-white overflow-hidden">
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
           <div className="w-full lg:w-1/2">

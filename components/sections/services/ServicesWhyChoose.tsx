@@ -23,7 +23,7 @@ const icons = [
 
 export default function ServicesWhyChoose() {
   return (
-    <section id="why-us" className="py-32 bg-white">
+    <section id="why-us" className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="mb-20 max-w-3xl">
           <SectionLabel>WHY CHOOSE US</SectionLabel>
