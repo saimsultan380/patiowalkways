@@ -126,11 +126,6 @@ export default function Footer() {
                 { name: "Why Choose Us", href: "/#why-us" },
                 { name: "Client Reviews", href: "/#reviews" },
                 { name: "Service Areas", href: "/areas" },
-                { name: "Davidson, NC", href: "/areas/davidson" },
-                { name: "Denver, NC", href: "/areas/denver" },
-                { name: "Huntersville, NC", href: "/areas/huntersville" },
-                { name: "Monroe, NC", href: "/areas/monroe" },
-                { name: "Concord, NC", href: "/areas/concord" },
               ].map((item) => (
                 <li key={item.name}>
                   <LinkNext href={item.href} className="text-secondary font-medium text-sm hover:text-accent hover:translate-x-1 inline-block transition-all duration-300">
