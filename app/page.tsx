@@ -20,7 +20,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <StatsMarquee />
+      <StatsMarquee variant="primary" />
       <BookForm />
       <ServicesGrid />
       <ServiceAreas />

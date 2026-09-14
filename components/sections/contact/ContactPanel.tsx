@@ -145,8 +145,6 @@ export default function ContactPanel() {
               }}
               className="relative bg-white border border-border-subtle rounded-[4px] p-6 sm:p-8 md:p-10 shadow-[0_20px_60px_-40px_rgba(26,47,38,0.45)] space-y-5 overflow-hidden"
             >
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-stone to-accent" />
-
               {submitted ? (
                 <div className="py-16 text-center">
                   <p className="text-2xl font-space font-bold mb-3">

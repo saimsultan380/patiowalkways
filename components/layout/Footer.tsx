@@ -3,8 +3,9 @@
 import Image from "next/image";
 import LinkNext from "next/link";
 import { Globe, Phone, Mail } from "lucide-react";
-import { brand, areas } from "@/data/content";
+import { brand } from "@/data/content";
 import { detailedServices } from "@/data/services-page";
+import { areaNavItems } from "@/data/areas";
 
 const SocialIcon = ({ name }: { name: string }) => {
   const icons: Record<string, React.ReactNode> = {
@@ -124,7 +125,12 @@ export default function Footer() {
                 { name: "Types of Patios", href: "/#patios" },
                 { name: "Why Choose Us", href: "/#why-us" },
                 { name: "Client Reviews", href: "/#reviews" },
-                { name: "Service Areas", href: "/#areas" },
+                { name: "Service Areas", href: "/areas" },
+                { name: "Davidson, NC", href: "/areas/davidson" },
+                { name: "Denver, NC", href: "/areas/denver" },
+                { name: "Huntersville, NC", href: "/areas/huntersville" },
+                { name: "Monroe, NC", href: "/areas/monroe" },
+                { name: "Concord, NC", href: "/areas/concord" },
               ].map((item) => (
                 <li key={item.name}>
                   <LinkNext href={item.href} className="text-secondary font-medium text-sm hover:text-accent hover:translate-x-1 inline-block transition-all duration-300">
@@ -141,9 +147,14 @@ export default function Footer() {
               Serving a {brand.radius} to make travel and material logistics easier.
             </p>
             <ul className="space-y-2 mb-8">
-              {areas.map((area) => (
-                <li key={area} className="text-secondary text-sm font-medium">
-                  {area}
+              {areaNavItems.map((area) => (
+                <li key={area.slug}>
+                  <LinkNext
+                    href={area.hasPage ? area.href : "/areas"}
+                    className="text-secondary text-sm font-medium hover:text-accent transition-colors"
+                  >
+                    {area.name}
+                  </LinkNext>
                 </li>
               ))}
             </ul>

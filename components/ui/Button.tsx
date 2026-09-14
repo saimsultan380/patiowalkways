@@ -17,7 +17,7 @@ export default function Button({ variant = "primary", children, className, ...pr
     primary: "bg-primary text-white hover:bg-primary/90",
     accent: "bg-accent text-white hover:bg-accent/90",
     stone: "bg-stone text-primary hover:bg-stone/90",
-    outline: "border border-white text-white hover:bg-white hover:text-primary",
+    outline: "border border-white text-white hover:bg-white/15 hover:border-white hover:text-white",
     text: "p-0 text-primary hover:text-accent border-b border-transparent hover:border-accent"
   };
 

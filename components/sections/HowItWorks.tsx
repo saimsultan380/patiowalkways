@@ -94,7 +94,6 @@ export default function HowItWorks({
         </div>
 
         <div className="mt-28 flex flex-col items-center">
-          <div className="w-full h-[1px] bg-border-subtle mb-16" />
           <div className="flex flex-col sm:flex-row items-center gap-8">
             <p className="text-sm font-bold text-primary uppercase tracking-widest">Ready to start step one?</p>
             <Button

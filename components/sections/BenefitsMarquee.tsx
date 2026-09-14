@@ -15,7 +15,7 @@ const icons = [
 
 export default function BenefitsMarquee() {
   return (
-    <section className="bg-white py-8 overflow-hidden border-y border-border-subtle select-none">
+    <section className="bg-white py-8 overflow-hidden select-none">
       <div className="flex">
         <motion.div
           initial={{ x: 0 }}

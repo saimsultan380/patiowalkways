@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Phone, ArrowDown } from "lucide-react";
+import { Phone } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionLabel from "@/components/ui/SectionLabel";
 import { brand } from "@/data/content";
@@ -90,21 +90,12 @@ export default function ContactHero() {
           >
             <Button
               variant="outline"
-              className="px-3.5 py-2.5 sm:px-10 sm:py-5 text-[11px] sm:text-base border-white/50 text-white hover:bg-white hover:text-primary inline-flex items-center justify-center gap-1.5 whitespace-nowrap"
+              className="px-3.5 py-2.5 sm:px-10 sm:py-5 text-[11px] sm:text-base border-white/50 text-white hover:bg-white/15 hover:text-white inline-flex items-center justify-center gap-1.5 whitespace-nowrap"
             >
-              <Phone size={14} className="shrink-0" />
+              <Phone size={14} className="shrink-0 text-white" />
               <span>Call Us</span>
             </Button>
           </a>
-          <button
-            onClick={() =>
-              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
-            }
-            className="hidden sm:inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white/70 hover:text-stone transition-colors ml-2"
-          >
-            Scroll
-            <ArrowDown size={16} />
-          </button>
         </motion.div>
       </div>
     </section>

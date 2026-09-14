@@ -115,9 +115,9 @@ export default function ServicePageHero({
             <a href={`tel:${brand.phone.replace(/[^\d+]/g, "")}`} className="shrink-0">
               <Button
                 variant="outline"
-                className="px-3.5 py-2.5 sm:px-10 sm:py-5 text-[11px] sm:text-base border-white/50 text-white hover:bg-white hover:text-primary inline-flex items-center justify-center gap-1.5 whitespace-nowrap"
+                className="px-3.5 py-2.5 sm:px-10 sm:py-5 text-[11px] sm:text-base border-white/50 text-white hover:bg-white/15 hover:text-white inline-flex items-center justify-center gap-1.5 whitespace-nowrap"
               >
-                <Phone size={14} className="shrink-0" />
+                <Phone size={14} className="shrink-0 text-white" />
                 <span>{secondaryCta}</span>
               </Button>
             </a>

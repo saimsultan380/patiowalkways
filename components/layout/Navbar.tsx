@@ -8,22 +8,31 @@ import { Menu, X, Phone, MapPin, ChevronDown, ArrowRight } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { brand } from "@/data/content";
 import { serviceNavGroups } from "@/data/service-nav";
+import { areaNavItems } from "@/data/areas";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isAreasOpen, setIsAreasOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isMobileAreasOpen, setIsMobileAreasOpen] = useState(false);
 
   const navLinks = [
-    { name: "How It Works", href: "/#how-it-works" },
-    { name: "Areas", href: "/#areas" },
     { name: "Reviews", href: "/#reviews" },
     { name: "Contact", href: "/contact" },
   ];
 
+  const areaLinks = areaNavItems.filter((area) => area.hasPage);
+
   const closeMobile = () => {
     setIsMobileMenuOpen(false);
     setIsMobileServicesOpen(false);
+    setIsMobileAreasOpen(false);
+  };
+
+  const closeDesktopMenus = () => {
+    setIsServicesOpen(false);
+    setIsAreasOpen(false);
   };
 
   return (
@@ -48,7 +57,7 @@ export default function Navbar() {
 
       <nav
         className="sticky top-0 z-50 bg-white border-b border-border-subtle py-3"
-        onMouseLeave={() => setIsServicesOpen(false)}
+        onMouseLeave={closeDesktopMenus}
       >
         <div className="max-w-[1320px] mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group">
@@ -75,13 +84,19 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center space-x-8 xl:space-x-10">
             <div
               className="relative"
-              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseEnter={() => {
+                setIsServicesOpen(true);
+                setIsAreasOpen(false);
+              }}
             >
               <button
                 type="button"
                 className="inline-flex items-center gap-1.5 text-[13px] font-bold uppercase tracking-widest text-primary transition-colors duration-300 hover:text-accent"
                 aria-expanded={isServicesOpen}
-                onClick={() => setIsServicesOpen((open) => !open)}
+                onClick={() => {
+                  setIsServicesOpen((open) => !open);
+                  setIsAreasOpen(false);
+                }}
               >
                 Services
                 <ChevronDown
@@ -89,6 +104,70 @@ export default function Navbar() {
                   className={`transition-transform duration-300 ${isServicesOpen ? "rotate-180" : ""}`}
                 />
               </button>
+            </div>
+
+            <Link
+              href="/#how-it-works"
+              className="text-[13px] font-bold uppercase tracking-widest text-primary transition-colors duration-300 hover:text-accent"
+            >
+              How It Works
+            </Link>
+
+            <div
+              className="relative"
+              onMouseEnter={() => {
+                setIsAreasOpen(true);
+                setIsServicesOpen(false);
+              }}
+            >
+              <button
+                type="button"
+                className="inline-flex items-center gap-1.5 text-[13px] font-bold uppercase tracking-widest text-primary transition-colors duration-300 hover:text-accent"
+                aria-expanded={isAreasOpen}
+                onClick={() => {
+                  setIsAreasOpen((open) => !open);
+                  setIsServicesOpen(false);
+                }}
+              >
+                Areas
+                <ChevronDown
+                  size={14}
+                  className={`transition-transform duration-300 ${isAreasOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+
+              <AnimatePresence>
+                {isAreasOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -6 }}
+                    transition={{ duration: 0.15 }}
+                    className="absolute left-0 top-full pt-3"
+                  >
+                    <div className="min-w-[220px] bg-white border border-border-subtle shadow-xl shadow-primary/5 py-2">
+                      <Link
+                        href="/areas"
+                        onClick={closeDesktopMenus}
+                        className="block px-4 py-2.5 text-sm font-bold text-accent hover:bg-bg-off transition-colors"
+                      >
+                        All Areas
+                      </Link>
+                      <div className="my-1 border-t border-border-subtle" />
+                      {areaLinks.map((area) => (
+                        <Link
+                          key={area.slug}
+                          href={area.href}
+                          onClick={closeDesktopMenus}
+                          className="block px-4 py-2.5 text-sm font-medium text-primary hover:bg-bg-off hover:text-accent transition-colors"
+                        >
+                          {area.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
             {navLinks.map((link) => (
@@ -258,6 +337,58 @@ export default function Navbar() {
                               ))}
                             </ul>
                           </div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              <Link
+                href="/#how-it-works"
+                onClick={closeMobile}
+                className="text-3xl sm:text-4xl font-playfair italic text-white hover:text-stone transition-colors"
+              >
+                How It Works
+              </Link>
+
+              <div>
+                <button
+                  type="button"
+                  onClick={() => setIsMobileAreasOpen((open) => !open)}
+                  className="w-full flex items-center justify-between text-3xl sm:text-4xl font-playfair italic text-white hover:text-stone transition-colors"
+                >
+                  Areas
+                  <ChevronDown
+                    size={28}
+                    className={`transition-transform ${isMobileAreasOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+                <AnimatePresence>
+                  {isMobileAreasOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="pt-4 pb-2 space-y-2">
+                        <Link
+                          href="/areas"
+                          onClick={closeMobile}
+                          className="block text-sm font-bold uppercase tracking-widest text-stone"
+                        >
+                          View All Areas →
+                        </Link>
+                        {areaLinks.map((area) => (
+                          <Link
+                            key={`mobile-area-${area.slug}`}
+                            href={area.href}
+                            onClick={closeMobile}
+                            className="block text-base text-white/85 hover:text-stone transition-colors"
+                          >
+                            {area.name}
+                          </Link>
                         ))}
                       </div>
                     </motion.div>

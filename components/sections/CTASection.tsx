@@ -64,14 +64,22 @@ export default function CTASection({
             <Button
               variant="stone"
               className="px-3.5 py-2.5 sm:px-12 sm:py-4 text-[11px] sm:text-base border-none whitespace-nowrap"
-              onClick={() => document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() => {
+                const book = document.getElementById("book");
+                if (book) book.scrollIntoView({ behavior: "smooth" });
+                else window.location.href = "/contact";
+              }}
             >
               {primaryCta}
             </Button>
             <Button
               variant="outline"
-              className="px-3.5 py-2.5 sm:px-12 sm:py-4 text-[11px] sm:text-base border-white/70 text-white hover:bg-white hover:text-primary whitespace-nowrap"
-              onClick={() => document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })}
+              className="px-3.5 py-2.5 sm:px-12 sm:py-4 text-[11px] sm:text-base border-white/70 text-white hover:bg-white/15 hover:text-white whitespace-nowrap"
+              onClick={() => {
+                const book = document.getElementById("book");
+                if (book) book.scrollIntoView({ behavior: "smooth" });
+                else window.location.href = "/contact";
+              }}
             >
               {secondaryCta}
             </Button>
