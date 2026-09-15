@@ -3,10 +3,10 @@ export const brand = {
   shortName: "Galdamez",
   accentName: "Hardscaping",
   tagline: "Outdoor Living, Hardscaping & Landscaping Services Charlotte",
-  phone: "000-000-0000",
-  email: "hello@patioliving.com",
+  phone: "704-699-3661",
+  email: "Moisesgaldamez63@gmail.com",
   address: "123 Main Street, Charlotte, NC 28202",
-  radius: "60-mile radius from Charlotte",
+  radius: "Charlotte and surrounding communities",
   logo: "/logo.jpg",
 };
 
@@ -361,13 +361,13 @@ export const faqs = [
   {
     question: "What areas around Charlotte do you serve?",
     answer:
-      "We provide patio, paver, hardscaping, landscaping, and outdoor living services throughout Charlotte and nearby communities within a 60-mile service area. Our current service areas include Charlotte, NC; Davidson, NC; Denver, NC; Huntersville, NC; Monroe, NC; Concord, NC, and surrounding areas. If you are located outside these communities but within approximately 60 miles of Charlotte, contact us with your project location. We may be able to serve your property depending on the project and travel requirements.",
+      "We provide patio, paver, hardscaping, landscaping, and outdoor living services throughout Charlotte and nearby communities. Our current service areas include Charlotte, NC; Davidson, NC; Denver, NC; Huntersville, NC; Monroe, NC; Concord, NC, and surrounding areas. If you are located nearby but outside these communities, contact us with your project location. We may be able to serve your property depending on the project and travel requirements.",
   },
 ];
 
 export const stats = [
   { value: "Free", label: "Estimates" },
-  { value: "60mi", label: "Charlotte Radius" },
+  { value: "Local", label: "Charlotte Service" },
   { value: "Full", label: "Outdoor Solutions" },
   { value: "Custom", label: "Patio Designs" },
 ];

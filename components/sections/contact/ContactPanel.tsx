@@ -30,7 +30,7 @@ export default function ContactPanel() {
       label: "Based in",
       value: brand.address,
       href: undefined,
-      hint: `Serving a ${brand.radius}`,
+      hint: `Serving ${brand.radius}`,
     },
   ];
 

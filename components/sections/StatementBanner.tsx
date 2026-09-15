@@ -33,8 +33,8 @@ export default function StatementBanner() {
 
           <div className="flex justify-center gap-10 sm:gap-16 md:gap-24">
             <div className="text-center">
-              <p className="text-3xl sm:text-4xl md:text-5xl font-playfair font-bold text-white mb-2">60mi</p>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-white/70">Charlotte Radius</p>
+              <p className="text-3xl sm:text-4xl md:text-5xl font-playfair font-bold text-white mb-2">Local</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-white/70">Charlotte Service</p>
             </div>
             <div className="text-center">
               <p className="text-3xl sm:text-4xl md:text-5xl font-playfair font-bold text-white mb-2">Full</p>

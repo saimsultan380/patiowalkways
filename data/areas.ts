@@ -364,13 +364,13 @@ export const areasHub = {
   meta: {
     title: "Service Areas | Charlotte Region Outdoor Living | Empresa Galdamez",
     description:
-      "Empresa Galdamez serves Charlotte, Davidson, Denver, Huntersville, Monroe, Concord, and surrounding communities within a 60-mile radius.",
+      "Empresa Galdamez serves Charlotte, Davidson, Denver, Huntersville, Monroe, Concord, and surrounding communities.",
   },
   hero: {
     label: "SERVICE AREAS",
     title: "Charlotte & Surrounding",
     titleAccent: "Communities",
-    description: `Serving a ${brand.radius} with landscaping, hardscaping, and outdoor living planned around each property. Explore Davidson, Denver, Huntersville, Monroe, and Concord for full local pages, or request an estimate for Charlotte and nearby communities.`,
+    description: `Serving ${brand.radius} with landscaping, hardscaping, and outdoor living planned around each property. Explore Davidson, Denver, Huntersville, Monroe, and Concord for full local pages, or request an estimate for Charlotte and nearby communities.`,
     imageSrc: "/03_front_entry_rebuild.jpg",
   },
 };

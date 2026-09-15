@@ -140,7 +140,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <h4 className="font-space text-base font-bold uppercase tracking-[0.2em] mb-10 text-accent">Service Area</h4>
             <p className="text-secondary text-sm mb-6 font-medium">
-              Serving a {brand.radius} to make travel and material logistics easier.
+              Serving {brand.radius} with landscaping, hardscaping, and outdoor living.
             </p>
             <ul className="space-y-2 mb-8">
               {areaNavItems.map((area) => (

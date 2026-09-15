@@ -19,7 +19,7 @@ const spaceGrotesk = Space_Grotesk({
 
 const siteTitle = "Empresa Galdamez Hardscaping | Outdoor Living Charlotte";
 const siteDescription =
-  "Transform your Charlotte property with expert patio, paver, walkway, driveway, and outdoor living services. Custom patios, hardscaping, landscaping, and more within a 60-mile radius of Charlotte.";
+  "Transform your Charlotte property with expert patio, paver, walkway, driveway, and outdoor living services. Custom patios, hardscaping, landscaping, and outdoor living across Charlotte and surrounding communities.";
 
 export const metadata: Metadata = {
   title: siteTitle,
@@ -75,7 +75,8 @@ export default function RootLayout({
       height: 512,
     },
     description: siteDescription,
-    telephone: "000-000-0000",
+    telephone: "704-699-3661",
+    email: "Moisesgaldamez63@gmail.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "123 Main Street",
