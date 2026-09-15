@@ -44,6 +44,7 @@ export default function ServicePageHero({
           alt={imageAlt ?? label}
           fill
           priority
+          quality={75}
           className="object-cover object-center"
           sizes="100vw"
         />

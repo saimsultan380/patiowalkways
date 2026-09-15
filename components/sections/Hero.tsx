@@ -104,6 +104,7 @@ export default function Hero() {
                 alt="Patio, paver, and outdoor living services in Charlotte"
                 fill
                 priority={currentImage === 0}
+                quality={75}
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />

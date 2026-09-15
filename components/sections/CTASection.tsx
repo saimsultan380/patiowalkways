@@ -32,7 +32,8 @@ export default function CTASection({
           alt="Let's build your dream outdoor space"
           fill
           className="object-cover"
-          priority
+          loading="lazy"
+          quality={75}
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/60" />

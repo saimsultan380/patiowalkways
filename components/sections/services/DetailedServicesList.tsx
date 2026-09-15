@@ -39,7 +39,8 @@ export default function DetailedServicesList() {
                     alt={service.name}
                     width={1200}
                     height={900}
-                    priority={index < 2}
+                    loading="lazy"
+                    quality={75}
                     className="w-full h-auto aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
