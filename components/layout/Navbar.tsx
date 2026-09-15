@@ -19,7 +19,6 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Projects", href: "/projects" },
-    { name: "Reviews", href: "/#reviews" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -106,13 +105,6 @@ export default function Navbar() {
                 />
               </button>
             </div>
-
-            <Link
-              href="/#how-it-works"
-              className="text-[13px] font-bold uppercase tracking-widest text-primary transition-colors duration-300 hover:text-accent"
-            >
-              How It Works
-            </Link>
 
             <div
               className="relative"
@@ -344,14 +336,6 @@ export default function Navbar() {
                   )}
                 </AnimatePresence>
               </div>
-
-              <Link
-                href="/#how-it-works"
-                onClick={closeMobile}
-                className="text-3xl sm:text-4xl font-playfair italic text-white hover:text-stone transition-colors"
-              >
-                How It Works
-              </Link>
 
               <div>
                 <button
