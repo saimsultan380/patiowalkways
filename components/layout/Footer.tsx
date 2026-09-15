@@ -120,6 +120,7 @@ export default function Footer() {
             <ul className="space-y-4">
               {[
                 { name: "All Services", href: "/services" },
+                { name: "Projects", href: "/projects" },
                 { name: "Contact", href: "/contact" },
                 { name: "How We Work", href: "/#how-it-works" },
                 { name: "Types of Patios", href: "/#patios" },

@@ -1,102 +1,233 @@
-Landscaping & Hardscaping Services in Concord, NC
-From historic Union Street to Concord's newest neighborhoods, we build outdoor spaces made to keep up with a fast-growing city.
-[Request a Concord Estimate] [Discuss My Outdoor Project]
-[Image: a backyard patio or outdoor living space in a newer Concord-area neighborhood]
+Modern Courtyard Transformation
 
-Tell Us About Your Concord Property
-Landscaping, a patio, pavers, a driveway, retaining walls, outdoor living, lighting, drainage, or fencing: share a few details and we'll follow up with next steps.
-Name
-Phone
-Email
-Project Location
-Property Type
-Service Needed
+Project 1 Details
+
+Project Name: Modern Courtyard Transformation
+Location: Charlotte, North Carolina
+Category: Patios
+Image Count: 8
+
+Project Description
+
+A complete backyard transformation featuring a custom charcoal-and-taupe paver patio, detailed dark border work, new planting beds, warm landscape lighting, and a comfortable outdoor fire-pit seating area. The project documents the full installation journey from the original backyard and layout stage through excavation, base preparation, paver installation, finishing details, landscaping, and the final outdoor living reveal.
+
+Image Sequence
+
+1.  01_before.jpg — Existing backyard before construction
+
+2.  02_layout.jpg — Patio layout and measurements
+
+3.  03_excavation.jpg — Excavation stage
+
+4.  04_base.jpg — Compacted aggregate base preparation
+
+5.  05_pavers.jpg — Paver installation in progress
+
+6.  06_detail.jpg — Joint-sand and edge-detail finishing
+
+7.  07_finishing.jpg — Landscaping and lighting finishing
+
+8.  08_final.jpg — Completed patio and outdoor living reveal
+
+Suggested Website Listing
+
+Title: Modern Courtyard Transformation
+Category: Patios
+Location: Charlotte, NC
+
+Short Description:
+
+Custom paver patio transformation with charcoal-and-taupe pavers, a contrasting border, new planting beds, landscape lighting, and a finished fire-pit seating area.
+
+Sloped Garden Terraces
+
+Project 4 Details
+
+Project Name: Sloped Garden Terraces
+Location: Charlotte, North Carolina
+Category: Landscaping
+Image Count: 10
+
+Project Description
+
+A complete sloped-yard transformation that converted an eroded, difficult-to-use backyard into three level garden terraces. The project includes grading, drainage infrastructure, natural-gray segmental retaining walls, a central natural-stone stair path, rich planting beds, shade-tolerant landscaping, and warm low-voltage lighting. The image sequence documents the project from the original slope and design layout through excavation, drainage, wall construction, soil preparation, planting, lighting, and final reveal.
+
+Image Sequence
+
+1.  01_before.jpg — Eroded sloped backyard before construction
+
+2.  02_design.jpg — Terrace layout and measurements
+
+3.  03_excavation.jpg — Excavation and grading stage
+
+4.  04_drainage.jpg — Drainage preparation and catch basin installation
+
+5.  05_walls.jpg — Retaining-wall installation
+
+6.  06_steps.jpg — Central stair-path installation
+
+7.  07_soil.jpg — Soil and planting-bed preparation
+
+8.  08_planting.jpg — Garden planting stage
+
+9.  09_lighting.jpg — Near-final landscape-lighting stage
+
+10. 10_final.jpg — Completed terraced garden reveal
+
+Suggested Website Listing
+
+Title: Sloped Garden Terraces
+Category: Landscaping
+Location: Charlotte, NC
+
+Short Description:
+
+Eroded sloped backyard transformed into three planted garden terraces with segmental retaining walls, natural-stone steps, drainage improvements, shade gardens, and warm landscape lighting.
+
+Rooftop Terrace Garden
+
+Project 5 Details
+
+Project Name: Rooftop Terrace Garden
+Location: Charlotte, North Carolina
+Category: Outdoor Living
+Image Count: 10
+
+Project Description
+
+A weathered urban rooftop was transformed into a sophisticated outdoor living destination with waterproofing improvements, an elevated composite deck, integrated drainage access, large architectural planters, drip irrigation, a green privacy screen, an outdoor kitchen, dining furniture, lounge seating, and layered evening lighting. The image sequence documents the project from the original concrete roof surface through planning, waterproofing, framing, decking, irrigation, planting, furnishing, and final reveal.
+
+Image Sequence
+
+1.  01_before.jpg — Existing rooftop terrace before construction
+
+2.  02_design.jpg — Rooftop layout and material planning
+
+3.  03_waterproofing.jpg — Waterproofing preparation
+
+4.  04_framing.jpg — Adjustable pedestal and aluminum subframe installation
+
+5.  05_decking.jpg — Composite-deck installation in progress
+
+6.  06_detail.jpg — Deck trim, access panels, and planter detailing
+
+7.  07_irrigation.jpg — Planter and irrigation setup
+
+8.  08_planting.jpg — Rooftop garden planting stage
+
+9.  09_furnishing.jpg — Outdoor kitchen, furniture, and lighting stage
+
+10. 10_final.jpg — Completed rooftop terrace garden reveal
+
+Suggested Website Listing
+
+Title: Rooftop Terrace Garden
+Category: Outdoor Living
+Location: Charlotte, NC
+
+Short Description:
+
+Urban rooftop transformed with composite decking, architectural planters, irrigation, a green privacy screen, outdoor kitchen, dining and lounge areas, and layered evening lighting.
+
+Screened Porch Landscape
+
+Project 6 Details
+
+Project Name: Screened Porch Landscape
+Location: Charlotte, North Carolina
+Category: Landscaping
+Image Count: 10
+
+Project Description
+
+A complete screened-porch landscape transformation that replaced a muddy, underused yard with a curved paver approach, improved downspout drainage, a polished river-stone rain garden, rebuilt porch access, layered foundation planting, restored lawn edges, and warm landscape lighting. The image sequence documents the work from the original porch exterior through layout, grading, drainage, walkway installation, planting, finishing, evening lighting, and final reveal.
+
+Image Sequence
+
+1.  01_before.jpg — Existing screened porch and yard before construction
+
+2.  02_design.jpg — Landscape layout and measurements
+
+3.  03_grading.jpg — Grading and drainage installation
+
+4.  04_base.jpg — Walkway base and planting-bed preparation
+
+5.  05_walkway.jpg — Paver walkway installation in progress
+
+6.  06_detail.jpg — Paver, edge, and porch-drainage detailing
+
+7.  07_planting.jpg — Foundation and rain-garden planting stage
+
+8.  08_finishing.jpg — Mulch, lawn-edge, and landscape finishing
+
+9.  09_evening.jpg — Near-final evening lighting stage
+
+10. 10_final.jpg — Completed screened-porch landscape reveal
+
+Suggested Website Listing
+
+Title: Screened Porch Landscape
+Category: Landscaping
+Location: Charlotte, NC
+
+Short Description:
+
+Screened-porch landscape transformation with a curved paver walkway, improved downspout drainage, river-stone rain garden, layered planting beds, restored lawn, and warm path lighting.
+
+Front Entry Walkway Rebuild
 Project Details
-Preferred Contact Method
-[Request My Concord Estimate]
+Project Name: Front Entry Walkway Rebuild  
+Location: Charlotte, North Carolina  
+Category: Walkways  
+Image Count: 8
+Project Description
+A complete front-entry transformation replacing a cracked, narrow concrete walkway with a gently curving warm-gray and charcoal paver walkway, rebuilt stone-capped entry steps, improved drainage, fresh planting beds, layered shrubs, and warm low-voltage path lighting. The project documents the full process from the original entry and layout stage through excavation, base preparation, paver installation, finishing details, landscaping, and the final curb-appeal reveal.
+Image Sequence
+`01_before.jpg` — Existing front walkway before construction
+`02_layout.jpg` — Walkway layout and measurements
+`03_excavation.jpg` — Excavation and removal stage
+`04_base.jpg` — Aggregate base and drainage preparation
+`05_installation.jpg` — Paver and step installation in progress
+`06_detail.jpg` — Border, step, and joint-sand finishing
+`07_finishing.jpg` — Landscaping and path-light finishing
+`08_final.jpg` — Completed front entry reveal
+Suggested Website Listing
+Title: Front Entry Walkway Rebuild  
+Category: Walkways  
+Location: Charlotte, NC
+Short Description:
+Curved paver walkway and front-step transformation with a charcoal border, stone-capped steps, refreshed planting beds, and warm landscape lighting.
 
-Outdoor Services for Concord Properties
-Concord is one of the fastest-growing cities in the Charlotte region, and its properties reflect that: established homes near historic Union Street sit alongside new construction spreading across the city's western and southern edges. Empresa Galdamez plans outdoor work for both.
-Patios & Walkways Paver, stone, brick, and concrete patios, plus garden paths and entry walkways.
-Paver Services Expert paver installation for patios, walkways, pool decks, and driveways.
-Driveway Services Durable paver and concrete driveways built for lasting curb appeal.
-Walls & Structural Retaining walls, seating walls, and custom stone or paver steps.
-Outdoor Living Features Outdoor kitchens, fire pits, fireplaces, pergolas, gazebos, arbors, and decks.
-Lighting & Utilities Landscape lighting, irrigation, drainage, and grading solutions.
-Landscaping Sod, planting, mulch, rock, edging, artificial turf, and lawn care.
-Fences & Water Features Fence installation, ponds, and custom water features.
-Commercial Services Hardscaping and landscaping solutions built for business properties.
-[Request an Estimate]
+# Backyard Poolside Retreat
 
-What Makes Concord Different
-A city built for gathering. With Charlotte Motor Speedway and Concord Mills nearby, Concord has a strong entertaining culture, and outdoor spaces built for hosting, like a fire pit or patio, fit right in.
-Historic core, rapid growth. Neighborhoods near downtown and Union Street carry an established, historic character, while new subdivisions continue to spread across the city's growing edges.
-New residents, new yards. Major employers moving into the area mean a steady stream of new homes with bare yards ready for their first landscaping and hardscaping.
-Family-friendly pace. Parks, greenways, and a growing school system make Concord a draw for families who want usable, well-planned outdoor space at home.
-[VERIFICATION REQUIRED: confirm any specific Concord or Cabarrus County permitting requirements before publishing.]
-Signs Your Outdoor Space Could Use an Update
-A new-build backyard with no landscaping or patio yet
-A lawn that hasn't fully established or looks patchy
-An older patio, walkway, or driveway showing wear
-No shaded or defined space for hosting friends or family
-Drainage that pools near the house after rain
-A backyard that feels unfinished compared to the rest of the home
-One Contractor, Connected Improvements
-Patio + landscaping + lighting. Walkway + planting + edging. Retaining wall + grading + drainage. Driveway + walkway + landscaping. Fence + landscaping + outdoor living. Planning these together, instead of one at a time, tends to produce a more finished result and avoid rework later.
-How We Work
-Tell Us About Your Property — goals, space, and priorities.
-Review the Site — layout, access, drainage, existing features.
-Plan the Project — a practical approach for your property and budget.
-Complete the Work — installation carried out according to project scope.
-Finish the Space — final walkthrough, cleanup, and handoff.
-What Affects Project Cost
-Property size and project scope
-Material selected
-Site preparation and access
-Existing landscaping or hardscape
-Drainage and grading needs
-Number of features included
-Because Concord properties range from brand-new builds to established homes, a project-specific estimate gives the most accurate picture. [VERIFICATION REQUIRED: add verified pricing if Empresa Galdamez wants to publish one.]
-[Request a Concord Project Estimate]
-Why Choose Empresa Galdamez in Concord
-Broad capabilities. Landscaping, hardscaping, outdoor living, lighting, drainage, and fencing, planned as one project.
-Property-specific planning. Built around your lot, whether newly built or well established.
-Practical guidance. Recommendations based on what your property actually needs.
-Clear communication. You'll know what to expect from start to finish.
-Commercial Properties in Concord
-Concord's growing retail and business districts, from areas near Concord Mills to newer commercial corridors, benefit from the same coordinated approach.
-Business entrances and walkways
-Outdoor seating for restaurants and retail
-Landscaping that supports curb appeal
-Parking area edges and drainage
-Projects We Can Help With
-Paver patios, walkways, driveways, retaining walls, seating walls, outdoor kitchens, fire features, pergolas, landscaping, sod, planting, mulch, landscape lighting, drainage, grading, fencing, water features, ponds, and commercial outdoor improvements.
-Serving the Charlotte Region, Including Concord
-Empresa Galdamez serves properties throughout the Charlotte area, including Concord. Outside our immediate area? Share your project location, and we'll let you know if it's within reach.
-Other Serving Areas
-Charlotte, NC
-Denver, NC
-Huntersville, NC
-Monroe, NC
-Davidson, NC (and surrounding area)
-Frequently Asked Questions
-What landscaping services are available in Concord, NC?
-Sod, tree and shrub planting, flower planting, mulch, rock and edging, artificial turf, and lawn care and maintenance, suited to both new-build yards and established properties.
-Do you install patios and pavers in Concord?
-Yes. Paver, stone, brick, and concrete patios and walkways, styled to fit Concord's mix of historic and newer homes.
-Can landscaping and hardscaping be planned together?
-Yes. A patio paired with planting and lighting, or a driveway paired with a walkway, tends to look and work better than separate additions over time.
-What outdoor living features fit a Concord backyard?
-Outdoor kitchens, fire pits, fireplaces, pergolas, gazebos, arbors, and decks, ideal for a city built around hosting and entertaining.
-Do you offer retaining wall services?
-Yes. Retaining walls, seating walls, and steps for properties with elevation changes or drainage needs.
-Can you help a new-construction home in Concord get its first landscaping done?
-Yes. Many new Concord neighborhoods start with a bare yard, and we help plan the first round of sod, planting, and hardscaping from the ground up.
-Can you help with outdoor improvements for a business in Concord?
-Yes. Commercial hardscaping and landscaping are available for retail, office, and other business properties throughout Concord.
-How do I request an estimate in Concord?
-Fill out the form on this page, or call [VERIFIED PHONE NUMBER]. We'll follow up to discuss your project.
+## Project Details
 
-Ready to Improve Your Concord Outdoor Space?
-New build or established home, tell us about your Concord property and we'll help you plan the right next step.
-[Request a Concord Estimate] [Discuss Your Outdoor Project]
+**Project Name:** Backyard Poolside Retreat  
+**Location:** Charlotte, North Carolina  
+**Category:** Outdoor Living  
+**Image Count:** 8
+
+## Project Description
+
+A complete poolside transformation replacing a dated, cracked concrete surround with an expansive natural flagstone deck, darker pool coping, a curved raised stone seating wall, improved drainage, new planting beds, and warm landscape lighting. The project follows the full process from the original pool area and layout through demolition, excavation, base preparation, stone installation, finishing, and the final outdoor-living reveal.
+
+## Image Sequence
+
+1. `01_before.jpg` — Existing pool area before construction
+2. `02_design.jpg` — Pool-deck layout and measurements
+3. `03_removal.jpg` — Demolition and excavation stage
+4. `04_base.jpg` — Aggregate base and drainage preparation
+5. `05_stone.jpg` — Natural flagstone installation in progress
+6. `06_detail.jpg` — Coping, joints, and stone-detail finishing
+7. `07_finishing.jpg` — Seating wall, planting, and lighting finishing
+8. `08_final.jpg` — Completed poolside retreat reveal
+
+## Suggested Website Listing
+
+**Title:** Backyard Poolside Retreat  
+**Category:** Outdoor Living  
+**Location:** Charlotte, NC
+
+**Short Description:**
+
+Natural flagstone pool-deck transformation with custom coping, a raised stone seating wall, improved drainage, landscape lighting, and finished outdoor seating.

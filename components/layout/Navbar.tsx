@@ -18,6 +18,7 @@ export default function Navbar() {
   const [isMobileAreasOpen, setIsMobileAreasOpen] = useState(false);
 
   const navLinks = [
+    { name: "Projects", href: "/projects" },
     { name: "Reviews", href: "/#reviews" },
     { name: "Contact", href: "/contact" },
   ];
