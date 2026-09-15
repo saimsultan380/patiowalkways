@@ -19,8 +19,8 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[calc(100svh-7rem)] min-h-[560px] max-h-[calc(100svh-7rem)] flex flex-col lg:flex-row overflow-hidden bg-primary">
-      <div className="absolute top-0 left-0 w-1/2 h-full bg-primary -skew-x-12 -translate-x-1/4 pointer-events-none" />
+    <section className="relative h-[calc(100svh-7rem)] min-h-[560px] max-h-[calc(100svh-7rem)] flex flex-col lg:flex-row overflow-hidden bg-white">
+      <div className="absolute top-0 left-0 w-1/2 h-full bg-white -skew-x-12 -translate-x-1/4 pointer-events-none" />
 
       <div className="w-full lg:w-[55%] flex items-center justify-center px-6 py-8 sm:py-10 lg:py-12 relative z-10 min-h-0 overflow-y-auto">
         <div className="max-w-[720px] w-full">
@@ -29,24 +29,24 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <SectionLabel className="text-white">Charlotte Outdoor Living</SectionLabel>
+            <SectionLabel>Charlotte Outdoor Living</SectionLabel>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-space font-bold leading-[1.05] mb-4 sm:mb-6 text-white tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-space font-bold leading-[1.05] mb-4 sm:mb-6 text-primary tracking-tight"
           >
             Outdoor Living, Hardscaping &{" "}
-            <span className="text-stone">Landscaping Services Charlotte</span>
+            <span className="text-accent">Landscaping Services Charlotte</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sm sm:text-base md:text-lg text-white/75 mb-6 sm:mb-8 max-w-2xl leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-secondary mb-6 sm:mb-8 max-w-2xl leading-relaxed"
           >
             Transform your Charlotte property with expert patio, paver, walkway, driveway, and outdoor living services. From custom paver patios and natural stone walkways to concrete driveways, retaining walls, fire pits, outdoor kitchens, landscaping, and more, we create beautiful, functional outdoor spaces built to last.
           </motion.p>
@@ -79,7 +79,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="grid grid-cols-3 gap-2 sm:gap-8 pt-6 border-t border-white/15"
+            className="grid grid-cols-3 gap-2 sm:gap-8 pt-6 border-t border-border-subtle"
           >
             <TrustBadge text="Free Estimates" />
             <TrustBadge text="Charlotte Area" />
@@ -133,10 +133,10 @@ export default function Hero() {
 function TrustBadge({ text }: { text: string }) {
   return (
     <div className="flex items-center space-x-3">
-      <div className="flex-shrink-0 w-5 h-5 rounded-full bg-stone/20 flex items-center justify-center">
-        <span className="text-stone text-[10px]">✓</span>
+      <div className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center">
+        <span className="text-accent text-[10px]">✓</span>
       </div>
-      <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-white/85 leading-tight">
+      <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-primary leading-tight">
         {text}
       </span>
     </div>
