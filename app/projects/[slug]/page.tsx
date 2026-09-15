@@ -48,7 +48,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     <main className="min-h-screen">
       <Navbar />
 
-      <section className="relative min-h-[52vh] md:min-h-[62vh] flex flex-col justify-end overflow-hidden bg-primary">
+      <section className="relative flex flex-col justify-end overflow-hidden bg-primary">
         <div className="absolute inset-0 z-0">
           <Image
             src={project.coverImage}
@@ -63,10 +63,10 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-transparent to-primary/30" />
         </div>
 
-        <div className="relative z-10 w-full max-w-[1320px] mx-auto px-6 pt-14 pb-10 md:pt-16 md:pb-12">
+        <div className="relative z-10 w-full max-w-[1320px] mx-auto px-6 pt-8 pb-8 sm:pt-10 sm:pb-10 md:pt-12 md:pb-12">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-white/70 hover:text-stone transition-colors mb-6"
+            className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-white/70 hover:text-stone transition-colors mb-4"
           >
             <ArrowLeft size={14} />
             All Projects

@@ -9,7 +9,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 
 export default function ProjectsHero() {
   return (
-    <section className="relative min-h-[60vh] md:min-h-[68vh] flex flex-col justify-end overflow-hidden bg-primary">
+    <section className="relative flex flex-col justify-end overflow-hidden bg-primary">
       <div className="absolute inset-0 z-0">
         <Image
           src="/patio_project_01_08_final.jpg"
@@ -24,7 +24,7 @@ export default function ProjectsHero() {
         <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30" />
       </div>
 
-      <div className="relative z-10 w-full max-w-[1320px] mx-auto px-6 pt-16 pb-12 md:pt-20 md:pb-14">
+      <div className="relative z-10 w-full max-w-[1320px] mx-auto px-6 pt-10 pb-10 sm:pt-12 sm:pb-12 md:pt-14 md:pb-14">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
