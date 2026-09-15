@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import SectionLabel from "@/components/ui/SectionLabel";
 import AccordionItem from "@/components/ui/AccordionItem";
 import { faqs } from "@/data/content";
@@ -34,19 +33,9 @@ export default function FAQ({
               </>
             )}
           </h2>
-          <p className="text-secondary leading-relaxed mb-10 max-w-sm">
+          <p className="text-secondary leading-relaxed max-w-sm">
             {description}
           </p>
-
-          <div className="relative h-[180px] w-full max-w-[240px] rounded-[4px] overflow-hidden">
-            <Image
-              src="/01_patios_walkways_charlotte_nc.jpg"
-              alt="Outdoor patio FAQ"
-              fill
-              className="object-cover"
-              sizes="240px"
-            />
-          </div>
         </div>
 
         <div className="w-full lg:w-[60%] bg-white p-4 md:p-10 border border-border-subtle shadow-sm rounded-[4px]">

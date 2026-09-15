@@ -28,7 +28,7 @@ export default function CTASection({
     >
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1800&auto=format&fit=crop"
+          src="/landscaping_cta_background.jpg"
           alt="Let's build your dream outdoor space"
           fill
           className="object-cover"
