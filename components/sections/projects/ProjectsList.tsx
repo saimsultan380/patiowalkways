@@ -1,28 +1,15 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Images, MapPin } from "lucide-react";
-import SectionLabel from "@/components/ui/SectionLabel";
 import { portfolioProjects } from "@/data/projects-page";
+import ProjectCardSlider from "@/components/sections/projects/ProjectCardSlider";
 
 export default function ProjectsList() {
   return (
     <section id="project-list" className="py-12 sm:py-16 lg:py-20 bg-white scroll-mt-24">
       <div className="max-w-[1320px] mx-auto px-6">
-        <div className="mb-10 sm:mb-14 max-w-2xl">
-          <SectionLabel>ALL PROJECTS</SectionLabel>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-space font-bold tracking-tight mb-4">
-            Projects in{" "}
-            <span className="text-accent">sequence</span>
-          </h2>
-          <p className="text-secondary text-base sm:text-lg leading-relaxed">
-            Six completed outdoor projects across Charlotte. Open any project to
-            view the full gallery from before photos through the final reveal.
-          </p>
-        </div>
-
         <div className="space-y-8 sm:space-y-10">
           {portfolioProjects.map((project, index) => (
             <motion.article
@@ -37,17 +24,13 @@ export default function ProjectsList() {
                 className="group grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-stretch border border-border-subtle rounded-[4px] overflow-hidden hover:border-accent/40 transition-colors bg-white"
               >
                 <div className="relative lg:col-span-7 min-h-[240px] sm:min-h-[320px] lg:min-h-[380px]">
-                  <Image
-                    src={project.coverImage}
-                    alt={project.title}
-                    fill
-                    quality={75}
-                    loading={index === 0 ? "eager" : "lazy"}
+                  <ProjectCardSlider
+                    images={project.images}
+                    title={project.title}
                     priority={index === 0}
-                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                    sizes="(max-width: 1024px) 100vw, 60vw"
+                    className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.03]"
                   />
-                  <div className="absolute top-4 left-4 sm:top-5 sm:left-5 bg-primary text-stone px-3 py-1.5 rounded-[4px]">
+                  <div className="absolute top-4 left-4 sm:top-5 sm:left-5 z-10 bg-primary text-stone px-3 py-1.5 rounded-[4px]">
                     <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest">
                       Project {String(project.id).padStart(2, "0")}
                     </span>

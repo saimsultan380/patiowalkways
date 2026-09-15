@@ -104,19 +104,19 @@ export default function ServicePageHero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-row flex-nowrap items-center gap-2 sm:gap-4"
+            className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4"
           >
             <Button
               variant="stone"
-              className="px-3.5 py-2.5 sm:px-10 sm:py-5 text-[11px] sm:text-base whitespace-nowrap shrink"
+              className="w-full sm:w-auto px-5 py-3.5 sm:px-10 sm:py-5 text-sm sm:text-base whitespace-normal sm:whitespace-nowrap"
               onClick={() => document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })}
             >
               {primaryCta}
             </Button>
-            <a href={`tel:${brand.phone.replace(/[^\d+]/g, "")}`} className="shrink-0">
+            <a href={`tel:${brand.phone.replace(/[^\d+]/g, "")}`} className="w-full sm:w-auto shrink-0">
               <Button
                 variant="outline"
-                className="px-3.5 py-2.5 sm:px-10 sm:py-5 text-[11px] sm:text-base border-white/50 text-white hover:bg-white/15 hover:text-white inline-flex items-center justify-center gap-1.5 whitespace-nowrap"
+                className="w-full px-5 py-3.5 sm:px-10 sm:py-5 text-sm sm:text-base border-white/50 text-white hover:bg-white/15 hover:text-white inline-flex items-center justify-center gap-1.5 whitespace-normal sm:whitespace-nowrap"
               >
                 <Phone size={14} className="shrink-0 text-white" />
                 <span>{secondaryCta}</span>

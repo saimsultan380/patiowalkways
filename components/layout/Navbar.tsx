@@ -287,11 +287,11 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={() => setIsMobileServicesOpen((open) => !open)}
-                  className="w-full flex items-center justify-between text-3xl sm:text-4xl font-playfair italic text-white hover:text-stone transition-colors"
+                  className="w-full flex items-center justify-between text-2xl sm:text-3xl font-space font-bold tracking-tight text-white hover:text-stone transition-colors"
                 >
                   Services
                   <ChevronDown
-                    size={28}
+                    size={22}
                     className={`transition-transform ${isMobileServicesOpen ? "rotate-180" : ""}`}
                   />
                 </button>
@@ -341,11 +341,11 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={() => setIsMobileAreasOpen((open) => !open)}
-                  className="w-full flex items-center justify-between text-3xl sm:text-4xl font-playfair italic text-white hover:text-stone transition-colors"
+                  className="w-full flex items-center justify-between text-2xl sm:text-3xl font-space font-bold tracking-tight text-white hover:text-stone transition-colors"
                 >
                   Areas
                   <ChevronDown
-                    size={28}
+                    size={22}
                     className={`transition-transform ${isMobileAreasOpen ? "rotate-180" : ""}`}
                   />
                 </button>
@@ -391,7 +391,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={closeMobile}
-                    className="text-3xl sm:text-4xl font-playfair italic text-white hover:text-stone transition-colors"
+                    className="text-2xl sm:text-3xl font-space font-bold tracking-tight text-white hover:text-stone transition-colors"
                   >
                     {link.name}
                   </Link>

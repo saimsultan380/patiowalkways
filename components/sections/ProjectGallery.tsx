@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import SectionLabel from "@/components/ui/SectionLabel";
 import { portfolioProjects } from "@/data/projects-page";
+import ProjectCardSlider from "@/components/sections/projects/ProjectCardSlider";
 
 export default function ProjectGallery() {
   return (
@@ -38,17 +38,15 @@ export default function ProjectGallery() {
             }`}
           >
             <Link href={`/projects/${project.slug}`} className="absolute inset-0">
-              <Image
-                src={project.coverImage}
-                alt={project.title}
-                fill
-                quality={75}
-                loading="lazy"
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
+              <ProjectCardSlider
+                images={project.images}
+                title={project.title}
+                priority={index === 0}
+                className="absolute inset-0 transition-transform duration-700 group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
               />
 
-              <div className="absolute inset-0 bg-primary/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-8 text-center">
+              <div className="absolute inset-0 z-20 bg-primary/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-8 text-center">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-stone mb-2">
                   {project.category}
                 </span>
