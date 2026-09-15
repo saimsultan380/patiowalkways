@@ -12,9 +12,9 @@ export default function ServicesHero() {
   const quickLinks = detailedServices.slice(0, 6);
 
   return (
-    <section className="relative md:min-h-[72vh] flex flex-col justify-end overflow-hidden">
+    <section className="relative min-h-[70vh] md:min-h-[72vh] flex flex-col justify-end overflow-hidden bg-primary">
       {/* Full-bleed background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-0">
         <Image
           src="/01_patios_walkways_charlotte_nc.jpg"
           alt="Complete hardscaping and landscaping services in Charlotte"
@@ -23,8 +23,8 @@ export default function ServicesHero() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/92 via-primary/78 to-primary/45" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/88 via-primary/72 to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/75 via-transparent to-primary/25" />
       </div>
 
       <div className="relative z-10 w-full max-w-[1320px] mx-auto px-6 pt-16 pb-8 md:pt-14 md:pb-10 lg:pt-20 lg:pb-14">

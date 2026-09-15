@@ -15,7 +15,7 @@ export const patiosWalkwaysPage = {
       "A well-built patio and a well-planned walkway work together — one gives you a place to gather, the other gets you there safely and comfortably. Empresa Galdamez designs and installs custom patios and walkways for Charlotte homeowners, using materials and layouts suited to how each property is actually used.",
     primaryCta: "Get Your Free Estimate",
     secondaryCta: "Call Us",
-    imageSrc: "/01_patios_walkways_charlotte_nc.jpg",
+    imageSrc: "/01_modern_courtyard_transformation.jpg",
     trustBadges: [
       "Custom Designs",
       "Quality Installation",

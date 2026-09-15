@@ -1,4 +1,4 @@
-/** Mega-menu + service page navigation (12+ entries). */
+/** Mega-menu + service page navigation — main service pages only. */
 
 export type ServiceNavItem = {
   name: string;
@@ -38,33 +38,13 @@ export const serviceNavGroups: ServiceNavGroup[] = [
     ],
   },
   {
-    title: "Outdoor Living",
+    title: "Outdoor & Landscape",
     items: [
       {
         name: "Outdoor Living Features",
         href: "/services/outdoor-living",
         description: "Kitchens, fire pits, pergolas & decks",
       },
-      {
-        name: "Outdoor Kitchens",
-        href: "/services/outdoor-living#outdoor-kitchens",
-        description: "Built-in grills, bars & cooking spaces",
-      },
-      {
-        name: "Fire Pits & Fireplaces",
-        href: "/services/outdoor-living#fire-features",
-        description: "Gathering spaces for year-round use",
-      },
-      {
-        name: "Pergolas & Gazebos",
-        href: "/services/outdoor-living#features",
-        description: "Shade and structure for outdoor rooms",
-      },
-    ],
-  },
-  {
-    title: "Lighting & Landscape",
-    items: [
       {
         name: "Lighting & Utilities",
         href: "/services/lighting",
@@ -74,16 +54,6 @@ export const serviceNavGroups: ServiceNavGroup[] = [
         name: "Landscaping",
         href: "/services/landscaping",
         description: "Sod, planting, mulch, turf & lawn care",
-      },
-      {
-        name: "Irrigation Systems",
-        href: "/services/lighting",
-        description: "Water systems for healthy landscapes",
-      },
-      {
-        name: "Drainage & Grading",
-        href: "/services/lighting#drainage",
-        description: "Move water away from hardscape areas",
       },
     ],
   },
@@ -96,14 +66,9 @@ export const serviceNavGroups: ServiceNavGroup[] = [
         description: "Privacy fencing, ponds & water features",
       },
       {
-        name: "Commercial Hardscaping",
+        name: "Commercial Services",
         href: "/services/commercial",
-        description: "Outdoor spaces for businesses",
-      },
-      {
-        name: "Commercial Landscaping",
-        href: "/services/commercial#landscaping",
-        description: "Curb appeal for commercial properties",
+        description: "Hardscaping & landscaping for businesses",
       },
       {
         name: "View All Services",
