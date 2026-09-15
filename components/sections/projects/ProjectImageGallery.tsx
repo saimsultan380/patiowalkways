@@ -72,10 +72,6 @@ export default function ProjectImageGallery({
               className="object-cover transition-transform duration-500 group-hover:scale-105"
               sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
-            <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-colors" />
-            <span className="absolute bottom-0 left-0 right-0 p-2 sm:p-2.5 bg-gradient-to-t from-primary/80 to-transparent text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-white opacity-0 group-hover:opacity-100 transition-opacity line-clamp-2">
-              {String(index + 1).padStart(2, "0")}. {image.caption}
-            </span>
           </button>
         ))}
       </div>
