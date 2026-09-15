@@ -1,25 +1,33 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import type { ProjectImage } from "@/data/projects-page";
 
 interface ProjectCardSliderProps {
   images: ProjectImage[];
+  coverImage?: string;
   title: string;
   priority?: boolean;
-  className?: string;
   sizes?: string;
 }
 
 export default function ProjectCardSlider({
   images,
+  coverImage,
   title,
   priority = false,
-  className = "",
   sizes = "(max-width: 1024px) 100vw, 60vw",
 }: ProjectCardSliderProps) {
-  const slides = images.length > 0 ? images : [];
+  const slides = useMemo(() => {
+    if (!images.length) return [];
+    // Start on the finished cover photo, then cycle the rest
+    if (!coverImage) return images;
+    const cover = images.find((image) => image.src === coverImage);
+    const rest = images.filter((image) => image.src !== coverImage);
+    return cover ? [cover, ...rest] : images;
+  }, [images, coverImage]);
+
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const [inView, setInView] = useState(false);
@@ -31,7 +39,7 @@ export default function ProjectCardSlider({
 
     const observer = new IntersectionObserver(
       ([entry]) => setInView(entry.isIntersecting),
-      { threshold: 0.25 }
+      { threshold: 0.2 }
     );
     observer.observe(node);
     return () => observer.disconnect();
@@ -47,39 +55,24 @@ export default function ProjectCardSlider({
 
   if (slides.length === 0) return null;
 
+  const active = slides[index];
+
   return (
     <div
       ref={rootRef}
-      className={`relative overflow-hidden bg-bg-off ${className}`}
+      className="absolute inset-0 overflow-hidden bg-[#dfe5e1]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {slides.map((slide, i) => {
-        const isActive = i === index;
-        const shouldLoad = priority || inView || i === 0 || Math.abs(i - index) <= 1;
-
-        if (!shouldLoad && !isActive) return null;
-
-        return (
-          <div
-            key={slide.src}
-            className={`absolute inset-0 transition-opacity duration-700 ease-out ${
-              isActive ? "opacity-100 z-[1]" : "opacity-0 z-0"
-            }`}
-            aria-hidden={!isActive}
-          >
-            <Image
-              src={slide.src}
-              alt={slide.alt || title}
-              fill
-              quality={75}
-              priority={priority && i === 0}
-              className="object-cover"
-              sizes={sizes}
-            />
-          </div>
-        );
-      })}
+      <Image
+        src={active.src}
+        alt={active.alt || title}
+        fill
+        quality={75}
+        priority={priority}
+        className="object-cover"
+        sizes={sizes}
+      />
 
       {slides.length > 1 && (
         <div className="absolute bottom-3 left-0 right-0 z-10 flex items-center justify-center gap-1.5 pointer-events-none">
@@ -87,7 +80,7 @@ export default function ProjectCardSlider({
             <span
               key={`dot-${slide.src}`}
               className={`h-1 rounded-full transition-all duration-300 ${
-                i === index ? "w-5 bg-stone" : "w-1.5 bg-white/55"
+                i === index ? "w-5 bg-stone" : "w-1.5 bg-white/70"
               }`}
             />
           ))}

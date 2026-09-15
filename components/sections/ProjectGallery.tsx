@@ -29,20 +29,20 @@ export default function ProjectGallery() {
         {portfolioProjects.map((project, index) => (
           <motion.div
             key={project.slug}
-            initial={{ opacity: 0, scale: 0.97 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ y: 16 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.06 }}
-            className={`relative group overflow-hidden rounded-[4px] min-h-[260px] sm:min-h-[300px] ${
-              index === 0 ? "sm:col-span-2 lg:col-span-2 lg:min-h-[420px]" : ""
+            transition={{ duration: 0.45, delay: index * 0.06 }}
+            className={`relative group overflow-hidden rounded-[4px] aspect-[4/3] ${
+              index === 0 ? "sm:col-span-2 lg:col-span-2 lg:aspect-[16/9]" : ""
             }`}
           >
-            <Link href={`/projects/${project.slug}`} className="absolute inset-0">
+            <Link href={`/projects/${project.slug}`} className="absolute inset-0 block">
               <ProjectCardSlider
                 images={project.images}
+                coverImage={project.coverImage}
                 title={project.title}
-                priority={index === 0}
-                className="absolute inset-0"
+                priority={index < 2}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
               />
 

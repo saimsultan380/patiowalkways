@@ -14,21 +14,21 @@ export default function ProjectsList() {
           {portfolioProjects.map((project, index) => (
             <motion.article
               key={project.slug}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              whileInView={{ y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: index * 0.04 }}
+              transition={{ duration: 0.45, delay: index * 0.04 }}
             >
               <Link
                 href={`/projects/${project.slug}`}
                 className="group grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-stretch border border-border-subtle rounded-[4px] overflow-hidden hover:border-accent/40 transition-colors bg-white"
               >
-                <div className="relative lg:col-span-7 min-h-[240px] sm:min-h-[320px] lg:min-h-[380px] overflow-hidden bg-bg-off">
+                <div className="relative lg:col-span-7 aspect-[16/10] sm:aspect-[16/9] lg:aspect-auto lg:min-h-[380px] overflow-hidden bg-[#dfe5e1]">
                   <ProjectCardSlider
                     images={project.images}
+                    coverImage={project.coverImage}
                     title={project.title}
-                    priority={index === 0}
-                    className="absolute inset-0"
+                    priority={index < 2}
                   />
                   <div className="absolute top-4 left-4 sm:top-5 sm:left-5 z-10 bg-primary text-stone px-3 py-1.5 rounded-[4px]">
                     <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest">
