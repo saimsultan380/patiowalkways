@@ -23,12 +23,12 @@ export default function ProjectsList() {
                 href={`/projects/${project.slug}`}
                 className="group grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-stretch border border-border-subtle rounded-[4px] overflow-hidden hover:border-accent/40 transition-colors bg-white"
               >
-                <div className="relative lg:col-span-7 min-h-[240px] sm:min-h-[320px] lg:min-h-[380px]">
+                <div className="relative lg:col-span-7 min-h-[240px] sm:min-h-[320px] lg:min-h-[380px] overflow-hidden bg-bg-off">
                   <ProjectCardSlider
                     images={project.images}
                     title={project.title}
                     priority={index === 0}
-                    className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.03]"
+                    className="absolute inset-0"
                   />
                   <div className="absolute top-4 left-4 sm:top-5 sm:left-5 z-10 bg-primary text-stone px-3 py-1.5 rounded-[4px]">
                     <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest">

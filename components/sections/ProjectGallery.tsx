@@ -42,7 +42,7 @@ export default function ProjectGallery() {
                 images={project.images}
                 title={project.title}
                 priority={index === 0}
-                className="absolute inset-0 transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
               />
 
